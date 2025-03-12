@@ -60,8 +60,7 @@ export default function CommandsPage() {
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-bold text-white mb-4">Bot Commands</h1>
                     <p className="text-xl text-gray-300">
-                        Erkunde alle verfügbaren Befehle, um deine Universitätszeit zu
-                        verbessern
+                        Nutze die folgenden Befehle in einem Chat des Discord Servers
                     </p>
                 </div>
 

@@ -87,7 +87,7 @@ export const COMMANDS: Command[] = [
             name: "User",
             description: "Wen möchtest du Melden?",
             required: true,
-            example: "@Paul"
+            example: "@Max"
         },
         {
             name: "Grund",
@@ -109,27 +109,74 @@ export const COMMANDS: Command[] = [
     {
         name: "!clear",
         description: "Lösche als Moderator ungewünschte Nachrichten aus dem Chat.",
-        categories: ["Moderator", "Team"]
+        categories: ["Moderator", "Team"],
+        parameters: [{
+            name: "Zahl",
+            description: "Wie viele Nachrichten sollen gelöscht werden?",
+            required: true,
+            example: "10"
+        },
+        {
+            name: "Username",
+            description: "Von wem sollen die Nachrichten gelöscht werden?",
+            required: false,
+            example: "max_mustermann"
+        }]
     },
     {
         name: "!slowmode",
         description: "Verändere als Moderator die Schreibgeschwindigkeit des Chats.",
-        categories: ["Moderator", "Team"]
+        categories: ["Moderator", "Team"],
+        parameters: [{
+            name: "Zeit",
+            description: "Wie hoch soll der Slowmode sein (in Sek.)?",
+            required: true,
+            example: "10 "
+        }]
     },
     {
-        name: "!de, !eng, !fr, !esp",
-        description: "Verändere als Moderator die Schreibgeschwindigkeit des Chats.",
+        name: "!de",
+        description: "Lass dir die Nachricht eines Users ins Deutsche übersetzen.",
         categories: ["Mitglieder"],
-            parameters: [{
-        name: "User",
-        description: "Wen möchtest du Melden?",
-        required: true
+        parameters: [{
+            name: "Nachricht",
+            description: "Antworte mit diesem Command auf eine Nachricht von einem User",
+            required: true,
+            example: " "
+        }]
     },
-    {
-        name: "Grund",
-        description: "Warum soll der User gemldet werden?",
-        required: true
-    }]
+        {
+        name: "!eng",
+        description: "Lass dir die Nachricht eines Users ins Englische übersetzen.",
+        categories: ["Mitglieder"],
+        parameters: [{
+            name: "Nachricht",
+            description: "Antworte mit diesem Command auf eine Nachricht von einem User",
+            required: true,
+            example: " "
+        }]
+    },
+        {
+        name: "!fr",
+            description: "Lass dir die Nachricht eines Users ins Französische übersetzen.",
+        categories: ["Mitglieder"],
+        parameters: [{
+            name: "Nachricht",
+            description: "Antworte mit diesem Command auf eine Nachricht von einem User",
+            required: true,
+            example: " "
+        }]
+    },
+        {
+        name: "!esp",
+            description: "Lass dir die Nachricht eines Users ins Spanische übersetzen.",
+        categories: ["Mitglieder"],
+        parameters: [{
+            name: "Nachricht",
+            description: "Antworte mit diesem Command auf eine Nachricht von einem User",
+            required: true,
+            example: " "
+        }]
     }
 ];
 
@@ -153,12 +200,12 @@ export const STATS = [
 
 export const QUESTIONS_AND_ANSWERS = [
     {
-        question: "How do I reset my password?",
-        answer: "To reset your password, go to the login page and click on 'Forgot Password'. Follow the instructions sent to your email.",
+        question: "Wie erstelle ich einen Discord Account?",
+        answer: " Folge dazu einfach diesem Link: https://support.discord.com/hc/de/articles/360033931551-Erste-Schritte#h_01H4RR2GE2FAK7DZ5W3765NGVT",
     },
     {
-        question: "How do I contact support?",
-        answer: "You can contact support by sending an email to info@htwk.de or by using the support channel on our Discord server.",
+        question: "Wer sind die Developer des Projekts?",
+        answer: "- ",
     },
     {
         question: "What is the refund policy?",
