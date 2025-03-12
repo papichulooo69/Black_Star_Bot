@@ -2,6 +2,8 @@
 
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 import {QUESTIONS_AND_ANSWERS} from "@/settings"
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const QuestionAndAnswers = () => {
     return (
@@ -24,7 +26,7 @@ const QuestionAndAnswers = () => {
                             {qa.question}
                         </AccordionTrigger>
                         <AccordionContent className="px-6 pb-4 text-gray-300">
-                            {qa.answer}
+                            <Markdown remarkPlugins={[remarkGfm]}>{qa.answer}</Markdown>
                         </AccordionContent>
                     </AccordionItem>
                 ))}
