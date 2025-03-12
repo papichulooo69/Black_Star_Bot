@@ -187,13 +187,13 @@ export const STATS = [
         icon: UsersIcon,
     },
     {
-        title: "Commands Used",
-        value: "50,000+",
+        title: "Bots",
+        value: "4",
         icon: MessageSquare,
     },
     {
-        title: "Servers",
-        value: "300+",
+        title: "Developer",
+        value: "3+",
         icon: ServerIcon,
     },
 ];
@@ -201,11 +201,11 @@ export const STATS = [
 export const QUESTIONS_AND_ANSWERS = [
     {
         question: "Wie erstelle ich einen Discord Account?",
-        answer: " Folge dazu einfach diesem Link: https://support.discord.com/hc/de/articles/360033931551-Erste-Schritte#h_01H4RR2GE2FAK7DZ5W3765NGVT",
+        answer: " Folge dazu einfach diesem Link: [Erstelle Deinen Account](https://support.discord.com/hc/de/articles/360033931551-Erste-Schritte#h_01H4RR2GE2FAK7DZ5W3765NGVT)",
     },
     {
         question: "Wer sind die Developer des Projekts?",
-        answer: "- ",
+        answer: "Paul (pul_pler) \n Collin (itadori) \n Max (sifu_max)",
     },
     {
         question: "What is the refund policy?",

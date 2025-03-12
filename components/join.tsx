@@ -11,10 +11,8 @@ const Join = () => {
                     Bist du bereit, deine Universitätszeit zu verbessern?
                 </h2>
                 <p className="text-gray-300 mb-8">
-                    Tritt unserer Community bei und entdecke die Möglichkeiten, die dir unser Bot bietet.
-                    Erhalte Informationen über Veranstaltungen, Kurse und vieles mehr direkt in deinem
-                    Discord-Server. Egal, ob du Fragen hast oder einfach nur plaudern möchtest, wir sind
-                    hier, um dir zu helfen!
+                    Tritt dem HTWK-Server bei und entdecke viele coole Dinge. Lerne neue Leute kennen und hilf uns, den 
+                    Server zu einem tollen Ort zu machen! 
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <Link
