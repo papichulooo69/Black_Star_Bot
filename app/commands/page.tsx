@@ -95,7 +95,7 @@ export default function CommandsPage() {
                 {filteredCommands.slashCommands.length > 0 && (
                     <div className="mb-10">
                         <h2 className="text-2xl font-bold text-white mb-6">
-                            Slash Commands
+                            Slash Commands (/)
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {filteredCommands.slashCommands.map((cmd) => (
@@ -143,7 +143,7 @@ export default function CommandsPage() {
                 {filteredCommands.prefixCommands.length > 0 && (
                     <div>
                         <h2 className="text-2xl font-bold text-white mb-6">
-                            Prefix Commands
+                            Prefix Commands (!)
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {filteredCommands.prefixCommands.map((cmd) => (

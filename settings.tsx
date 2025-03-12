@@ -61,33 +61,51 @@ export const FEATURES = [
 export const COMMANDS: Command[] = [
     {
         name: "/hilfe",
-        description: "Zeigt dir alle wichtigen Informationen zum Bot",
+        description: "Zeigt dir alle wichtigen Informationen zum Bot.",
         example: "/hilfe",
         categories: ["Hilfe", "Bot"],
     },
     {
         name: "/status",
-        description: "Zeigt dir Informationen über den Bot an",
+        description: "Zeigt dir Informationen über den Bot an.",
         example: "/status",
         categories: ["Bot"]
     },
     {
         name: "/bewerbung",
-        description: "Schicke eine bewerbung für das Discord Server Team ab",
+        description: "Schicke eine bewerbung für das Discord Server Team ab.",
         example: "/bewerbung",
         categories: ["Bewerbung", "Team"]
     },
     {
         name: "/user-report",
-        description: "Melde einen user auf Grund von Fehlverhalten",
+        description: "Melde einen User auf Grund von Fehlverhalten.",
         example: "/user-report",
         categories: ["Report"]
     },
     {
         name: "/developer",
-        description: "Zeigt dir die Developer des HTWK Bots an",
+        description: "Zeigt dir die Developer des HTWK Bots an.",
         example: "/developer",
         categories: ["Developer", "Bot"]
+    },
+        {
+        name: "!verify",
+            description: "Verifiziere dich, um den Server komplett nutzen zu können.",
+        example: "!verify",
+        categories: ["Verifizieren"]
+    },
+    {
+        name: "!clear",
+        description: "Lösche als Moderator ungewünschte Nachrichten aus dem Chat.",
+        example: "!clear + Zahl (+ Username)",
+        categories: ["Moderator", "Team"]
+    },
+    {
+        name: "!slowmode",
+        description: "Verändere als Moderator die Schreibgeschwindigkeit des Chats.",
+        example: "!slowmode + Zahl (sek.)",
+        categories: ["Moderator", "Team"]
     }
 ];
 
