@@ -85,20 +85,30 @@ export const COMMANDS: Command[] = [
     {
         name: "/user-report",
         description: "Melde einen User auf Grund von Fehlverhalten.",
-        example: "/user-report",
+        example: "/user-report User: Grund:",
         categories: ["Report"],
+        parameters: [{
+            name: "User",
+            description: "Wen möchtest du Melden?",
+            required: true
+        },
+        {
+            name: "Grund",
+            description: "Warum soll der User gemldet werden?",
+            required: true
+        }]
     },
     {
         name: "/developer",
         description: "Zeigt dir die Developer des HTWK Bots an.",
         example: "/developer",
-        categories: ["Developer", "Bot"]
+        categories: ["Developer", "Bot"], 
     },
         {
         name: "!verify",
             description: "Verifiziere dich, um den Server komplett nutzen zu können.",
         example: "!verify",
-        categories: ["Verifizieren"]
+            categories: ["Verifizieren", "Mitglieder"]
     },
     {
         name: "!clear",
@@ -111,6 +121,22 @@ export const COMMANDS: Command[] = [
         description: "Verändere als Moderator die Schreibgeschwindigkeit des Chats.",
         example: "!slowmode + Zahl (sek.)",
         categories: ["Moderator", "Team"]
+    },
+    {
+        name: "!de, !eng, !fr, !esp",
+        description: "Verändere als Moderator die Schreibgeschwindigkeit des Chats.",
+        example: "!slowmode + Zahl (sek.)",
+        categories: ["Mitglieder"],
+            parameters: [{
+        name: "User",
+        description: "Wen möchtest du Melden?",
+        required: true
+    },
+    {
+        name: "Grund",
+        description: "Warum soll der User gemldet werden?",
+        required: true
+    }]
     }
 ];
 
