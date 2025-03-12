@@ -8,10 +8,10 @@ const Hero = () => {
                     <Bot className="h-20 w-20 text-blue-500"/>
                 </div>
                 <h1 className="text-4xl font-bold text-white sm:text-6xl">
-                    HTWK Leipzig Discord Bot
+                    HTWK Leipzig Discord Server
                 </h1>
                 <p className="mt-6 text-xl text-gray-300">
-                    Dein digitaler Assistent für die HTWK Leipzig Community
+                    Deine digitale Anlaufstelle bei Problemen und Fragen
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                     <Link

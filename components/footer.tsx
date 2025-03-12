@@ -10,7 +10,7 @@ const Footer = () => {
                 <div>
                     <h3 className="text-lg font-semibold text-white mb-4">About</h3>
                     <p className="text-gray-400">
-                        Ein inoffizieller Discord Bot, erstellt von Studierenden für Studierende der HTWK Leipzig.
+                        Ein inoffizieller Discord Server, erstellt von Studierenden für Studierende der HTWK Leipzig.
                     </p>
                     <p className="text-gray-400 mt-4">
                         <Link href={GITHUB_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
@@ -36,7 +36,7 @@ const Footer = () => {
                                 href="/commands"
                                 className="text-gray-400 hover:text-white transition-colors"
                             >
-                                Commands
+                                View Commands
                             </Link>
                         </li>
                         <li>
@@ -44,7 +44,7 @@ const Footer = () => {
                                 href={DISCORD_LINK}
                                 className="text-gray-400 hover:text-white transition-colors"
                             >
-                                Discord Server
+                                Join Discord Server
                             </Link>
                         </li>
                     </ul>
@@ -52,7 +52,7 @@ const Footer = () => {
                 <div>
                     <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
                     <p className="text-gray-400">
-                        Diese Webseite und der Bot sind nicht offiziell mit der HTWK Leipzig verbunden.
+                        Diese Webseite und der Discord Server mit dazugehörigen Bot sind nicht offiziell mit der HTWK Leipzig verbunden.
                     </p>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import {BellDot, BookOpenText, LibraryBig, ServerIcon, MessageSquare, Users, UsersIcon, Zap} from "lucide-react";
+import {BellDot, BookOpenText, LibraryBig, ServerIcon, MessageSquare, Users, UsersIcon, Zap, Bot} from "lucide-react";
 // https://lucide.dev/
 interface Banner {
     title: string;
@@ -13,47 +13,50 @@ export const GITHUB_LINK = "https://github.com/Hochschule-HTWK-Leipzig"
 
 export const BANNERS: Banner[] = [
     {
-        title: "⚠️ Unofficial project - Not affiliated with HTWK Leipzig",
-        link: DISCORD_LINK,
-        linkText: "Join our Discord Server",
+        title: "⚠️ Inoffizielles Projekt - Nicht offiziell mit der HTWK Leipzig verbunden",
         color: "yellow"
     }
 ]
 
 export const FEATURES = [
     {
-        title: "Course Information",
-        description: "Get instant access to course schedules, room changes, and important deadlines directly through Discord.",
+        title: "Allgemeine Information",
+        description: "Falls ihr schon Studenten der HTWK seid oder auch nicht, ist völlig egal, hier könnt ihr euch austauschen, informieren und gemeinsam Spaß haben!",
         Icon: BookOpenText,
     },
     {
         title: "Community Engagement",
-        description: "Participate in discussions, ask questions, and connect with fellow students and faculty members.",
+        description: "Nimm an spannenden Diskussionen teil, stelle Fragen und vernetze dich mit anderen Studenten.",
         Icon: Users,
     },
     {
-        title: "Event Notifications",
-        description: "Stay updated on university events, workshops, and seminars.",
+        title: "Benachrichtigungen",
+        description: "Du kannst über folgende Themen informieren: Offizielle News, StuRa News, FSR News, HTWK-Bot News, Umfragen und Giveaways.",
         Icon: BellDot,
     },
     {
-        title: "Study Groups",
-        description: "Find or create study groups for your courses.",
+        title: "Studiengänge",
+        description: "Auf dem Server gibt es für jeden Studiengang (Bachelor und Master) einen eigenen Kanal zum informieren und austauschen.",
         Icon: LibraryBig,
     },
     {
-        title: "Quick Answers",
-        description: "Get quick answers to common questions about university life, courses, and campus facilities.",
+        title: "Question and Answer",
+        description: "Erhalte schnelle Antworten auf häufig gestellte Fragen zur Universität, zu Kursen und Campuseinrichtungen.",
         Icon: Zap,
     },
+    {
+        title: "HTWK Leipzig Bot",
+        description: "Der HTWK Leipzig Discord Server verfügt über ein eigenes Bot-System. ",
+        Icon: Bot,
+    }
 ]
 
 export const COMMANDS = [
     {
-        name: "/schedule",
+        name: "/hilfe",
         description: "View your course schedule for the day or week",
         example: "/schedule week",
-        categories: ["Academic", "Course Management"]
+        categories: ["Hilfe"]
     },
     {
         name: "/mensa",
@@ -89,8 +92,8 @@ export const COMMANDS = [
 
 export const STATS = [
     {
-        title: "Active Users",
-        value: "1,200+",
+        title: "Aktive Benutzer",
+        value: "30+",
         icon: UsersIcon,
     },
     {
@@ -99,7 +102,7 @@ export const STATS = [
         icon: MessageSquare,
     },
     {
-        title: "Servers",
+        title: "Bot-System",
         value: "300+",
         icon: ServerIcon,
     },
