@@ -7,6 +7,13 @@ interface Banner {
     color: "red" | "green" | "blue" | "yellow" | "purple" | "pink" | "gray"
 }
 
+interface Command {
+    name: string;
+    description: string;
+    example: string;
+    categories: string[];
+}
+
 export const DISCORD_LINK = "https://discord.gg/eenP4pu7k7";
 export const WEBSITE_LINK = "https://www.htwk-leipzig.de";
 export const GITHUB_LINK = "https://github.com/Hochschule-HTWK-Leipzig"
@@ -51,12 +58,12 @@ export const FEATURES = [
     }
 ]
 
-export const COMMANDS = [
+export const COMMANDS: Command[] = [
     {
         name: "/hilfe",
         description: "Zeigt dir alle wichtigen Informationen zum Bot",
         example: "/hilfe",
-        categories: ["Hilfe", "Bot"]
+        categories: ["Hilfe", "Bot"],
     },
     {
         name: "/status",
