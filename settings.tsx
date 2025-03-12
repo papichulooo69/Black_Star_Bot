@@ -102,8 +102,27 @@ export const STATS = [
         icon: MessageSquare,
     },
     {
-        title: "Bot-System",
+        title: "Servers",
         value: "300+",
         icon: ServerIcon,
     },
 ];
+
+export const QUESTIONS_AND_ANSWERS = [
+    {
+        question: "How do I reset my password?",
+        answer: "To reset your password, go to the login page and click on 'Forgot Password'. Follow the instructions sent to your email.",
+    },
+    {
+        question: "How do I contact support?",
+        answer: "You can contact support by sending an email to info@htwk.de or by using the support channel on our Discord server.",
+    },
+    {
+        question: "What is the refund policy?",
+        answer: "Our refund policy allows for refunds within 30 days of purchase. Please refer to our refund policy page for more details.",
+    },
+    {
+        question: "How do I change my email address?",
+        answer: "To change your email address, go to your account settings and update your email under 'Account Information'.",
+    }
+]

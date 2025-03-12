@@ -24,7 +24,11 @@ export default function RootLayout({
         <body className={cn(inter.className, "bg-gray-900 text-white")}>
         <Banners/>
         <Header/>
-        {children}
+        <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                {children}
+            </div>
+        </main>
         <Footer/>
         </body>
         </html>
