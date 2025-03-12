@@ -1,8 +1,8 @@
 "use client";
 
-import { COMMANDS } from "@/settings";
-import { useState } from "react";
-import { Check, Copy } from "lucide-react";
+import {Command, COMMANDS} from "@/settings";
+import {useState} from "react";
+import {Check, Copy} from "lucide-react";
 
 export default function CommandsPage() {
     const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
@@ -95,47 +95,10 @@ export default function CommandsPage() {
                 {filteredCommands.slashCommands.length > 0 && (
                     <div className="mb-10">
                         <h2 className="text-2xl font-bold text-white mb-6">
-                            Slash Commands (/)
+                            Slash Commands{" "}<span className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">/</span>
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {filteredCommands.slashCommands.map((cmd) => (
-                                <div
-                                    key={cmd.name}
-                                    className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700"
-                                >
-                                    <div className="flex items-start justify-between">
-                                        <div>
-                                            <h3 className="text-xl font-semibold text-white mb-2">
-                                                {cmd.name}
-                                            </h3>
-                                            {cmd.categories.map((category, index) => (
-                                                <span
-                                                    key={index}
-                                                    className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2"
-                                                >
-                          {category}
-                        </span>
-                                            ))}
-                                            <p className="text-gray-300 mb-4">{cmd.description}</p>
-                                        </div>
-                                        <button
-                                            onClick={() => copyCommand(cmd.example)}
-                                            className="text-gray-400 hover:text-white transition-colors"
-                                            title="Copy example command"
-                                        >
-                                            {copiedCommand === cmd.example ? (
-                                                <Check className="h-5 w-5" />
-                                            ) : (
-                                                <Copy className="h-5 w-5" />
-                                            )}
-                                        </button>
-                                    </div>
-                                    <div className="bg-gray-900/50 rounded p-3 font-mono text-sm text-gray-300">
-                                        Beispiel: {cmd.example}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        <CommandsList commands={filteredCommands.slashCommands} copyCommand={copyCommand}
+                                      copiedCommand={copiedCommand}/>
                     </div>
                 )}
 
@@ -143,47 +106,10 @@ export default function CommandsPage() {
                 {filteredCommands.prefixCommands.length > 0 && (
                     <div>
                         <h2 className="text-2xl font-bold text-white mb-6">
-                            Prefix Commands (!)
+                            Prefix Commands{" "}<span className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">!</span>
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {filteredCommands.prefixCommands.map((cmd) => (
-                                <div
-                                    key={cmd.name}
-                                    className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700"
-                                >
-                                    <div className="flex items-start justify-between">
-                                        <div>
-                                            <h3 className="text-xl font-semibold text-white mb-2">
-                                                {cmd.name}
-                                            </h3>
-                                            {cmd.categories.map((category, index) => (
-                                                <span
-                                                    key={index}
-                                                    className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2"
-                                                >
-                          {category}
-                        </span>
-                                            ))}
-                                            <p className="text-gray-300 mb-4">{cmd.description}</p>
-                                        </div>
-                                        <button
-                                            onClick={() => copyCommand(cmd.example)}
-                                            className="text-gray-400 hover:text-white transition-colors"
-                                            title="Copy example command"
-                                        >
-                                            {copiedCommand === cmd.example ? (
-                                                <Check className="h-5 w-5" />
-                                            ) : (
-                                                <Copy className="h-5 w-5" />
-                                            )}
-                                        </button>
-                                    </div>
-                                    <div className="bg-gray-900/50 rounded p-3 font-mono text-sm text-gray-300">
-                                        Beispiel: {cmd.example}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                            <CommandsList commands={filteredCommands.prefixCommands} copyCommand={copyCommand}
+                                          copiedCommand={copiedCommand}/>
                     </div>
                 )}
 
@@ -199,4 +125,68 @@ export default function CommandsPage() {
             </div>
         </main>
     );
+}
+
+const CommandsList = ({commands, copyCommand, copiedCommand}: {
+    commands: Command[],
+    copyCommand: (command: string) => void,
+    copiedCommand: string | null
+}) => {
+    return <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {commands.map((cmd) => (
+            <div
+                key={cmd.name}
+                className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700"
+            >
+                <div className="flex items-start justify-between">
+                    <div>
+                        <h3 className="text-xl font-semibold text-white mb-2">
+                            {cmd.name}
+                        </h3>
+                        {cmd.categories.map((category, index) => (
+                            <span
+                                key={index}
+                                className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2"
+                            >
+                          {category}
+                        </span>
+                        ))}
+                        <p className="text-gray-300 mb-4">{cmd.description}</p>
+                    </div>
+                    <button
+                        onClick={() => copyCommand(cmd.example)}
+                        className="text-gray-400 hover:text-white transition-colors"
+                        title="Copy example command"
+                    >
+                        {copiedCommand === cmd.example ? (
+                            <Check className="h-5 w-5"/>
+                        ) : (
+                            <Copy className="h-5 w-5"/>
+                        )}
+                    </button>
+                </div>
+              <p className="text-gray-500 mb-2">Beispiel:</p>
+                    {/* Example command */}
+                    <div className="bg-gray-900/50 rounded p-3 font-mono text-sm text-gray-300">
+                        {cmd.example}
+                    </div>
+                    {cmd.parameters && cmd.parameters?.length > 0 && (
+                        <>
+                            <p className="text-gray-500 mt-4 mb-2">Parameter:</p>
+                            <div className="space-y-2">
+                                {cmd.parameters?.map((param, index) => (
+                                    <div key={index} className="text-sm">
+                                        <span className="text-blue-400">{param.name}</span>
+                                        <span className="text-gray-300"> - {param.description}</span>
+                                        <span className={`ml-2 text-xs ${param.required ? 'text-red-400' : 'text-gray-500'}`}>
+                                            {param.required ? '(required)' : '(optional)'}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                        </>
+                    )}
+            </div>
+        ))}
+    </div>
 }

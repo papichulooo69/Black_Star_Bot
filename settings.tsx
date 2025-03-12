@@ -1,17 +1,22 @@
 import {BellDot, BookOpenText, LibraryBig, ServerIcon, MessageSquare, Users, UsersIcon, Zap, Bot} from "lucide-react";
 // https://lucide.dev/
-interface Banner {
+export interface Banner {
     title: string;
     link?: string;
     linkText?: string;
     color: "red" | "green" | "blue" | "yellow" | "purple" | "pink" | "gray"
 }
 
-interface Command {
+export interface Command {
     name: string;
     description: string;
     example: string;
     categories: string[];
+    parameters?: {
+        name: string;
+        description: string;
+        required: boolean;
+    }[]
 }
 
 export const DISCORD_LINK = "https://discord.gg/eenP4pu7k7";
@@ -81,7 +86,7 @@ export const COMMANDS: Command[] = [
         name: "/user-report",
         description: "Melde einen User auf Grund von Fehlverhalten.",
         example: "/user-report",
-        categories: ["Report"]
+        categories: ["Report"],
     },
     {
         name: "/developer",
