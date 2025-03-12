@@ -1,11 +1,11 @@
-import {ArrowRight, Bot} from "lucide-react";
+import { ArrowRight, School } from "lucide-react";
 import Link from "next/link";
 
 const Hero = () => {
     return (
             <div className="text-center">
                 <div className="flex justify-center mb-8">
-                    <Bot className="h-20 w-20 text-blue-500"/>
+                <School className="h-20 w-20 text-blue-500"/>
                 </div>
                 <h1 className="text-4xl font-bold text-white sm:text-6xl">
                     HTWK Leipzig Discord Server

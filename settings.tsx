@@ -54,39 +54,33 @@ export const FEATURES = [
 export const COMMANDS = [
     {
         name: "/hilfe",
-        description: "View your course schedule for the day or week",
-        example: "/schedule week",
-        categories: ["Hilfe"]
+        description: "Zeigt dir alle wichtigen Informationen zum Bot",
+        example: "/hilfe",
+        categories: ["Hilfe", "Bot"]
     },
     {
-        name: "/mensa",
-        description: "Check today's menu at the university cafeteria",
-        example: "/mensa today",
-        categories: ["Campus Life"]
+        name: "/status",
+        description: "Zeigt dir Informationen über den Bot an",
+        example: "/status",
+        categories: ["Bot"]
     },
     {
-        name: "/room",
-        description: "Find available study rooms or check room schedules",
-        example: "/room Li-115",
-        categories: ["Campus Life"]
+        name: "/bewerbung",
+        description: "Schicke eine bewerbung für das Discord Server Team ab",
+        example: "/bewerbung",
+        categories: ["Bewerbung", "Team"]
     },
     {
-        name: "/events",
-        description: "List upcoming university events and activities",
-        example: "/events next-week",
-        categories: ["Social"]
+        name: "/user-report",
+        description: "Melde einen user auf Grund von Fehlverhalten",
+        example: "/user-report",
+        categories: ["Report"]
     },
     {
-        name: "/studygroup",
-        description: "Create or find study groups for your courses",
-        example: "/studygroup create Mathematics-101",
-        categories: ["Academic"]
-    },
-    {
-        name: "/deadline",
-        description: "Set reminders for assignment deadlines",
-        example: "/deadline add 'Project Report' 2024-06-15",
-        categories: ["Academic"]
+        name: "/developer",
+        description: "Zeigt dir die Developer des HTWK Bots an",
+        example: "/developer",
+        categories: ["Developer", "Bot"]
     }
 ];
 
