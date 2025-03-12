@@ -95,7 +95,8 @@ export default function CommandsPage() {
                 {filteredCommands.slashCommands.length > 0 && (
                     <div className="mb-10">
                         <h2 className="text-2xl font-bold text-white mb-6">
-                            Slash Commands{" "}<span className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">/</span>
+                            Slash Commands{" "}<span
+                            className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">/</span>
                         </h2>
                         <CommandsList commands={filteredCommands.slashCommands} copyCommand={copyCommand}
                                       copiedCommand={copiedCommand}/>
@@ -106,10 +107,11 @@ export default function CommandsPage() {
                 {filteredCommands.prefixCommands.length > 0 && (
                     <div>
                         <h2 className="text-2xl font-bold text-white mb-6">
-                            Prefix Commands{" "}<span className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">!</span>
+                            Prefix Commands{" "}<span
+                            className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">!</span>
                         </h2>
-                            <CommandsList commands={filteredCommands.prefixCommands} copyCommand={copyCommand}
-                                          copiedCommand={copiedCommand}/>
+                        <CommandsList commands={filteredCommands.prefixCommands} copyCommand={copyCommand}
+                                      copiedCommand={copiedCommand}/>
                     </div>
                 )}
 
@@ -154,38 +156,75 @@ const CommandsList = ({commands, copyCommand, copiedCommand}: {
                         <p className="text-gray-300 mb-4">{cmd.description}</p>
                     </div>
                     <button
-                        onClick={() => copyCommand(cmd.example)}
+                        onClick={() => copyCommand(cmd.name)}
                         className="text-gray-400 hover:text-white transition-colors"
                         title="Copy example command"
                     >
-                        {copiedCommand === cmd.example ? (
+                        {copiedCommand === cmd.name ? (
                             <Check className="h-5 w-5"/>
                         ) : (
                             <Copy className="h-5 w-5"/>
                         )}
                     </button>
                 </div>
-              <p className="text-gray-500 mb-2">Beispiel:</p>
-                    {/* Example command */}
-                    <div className="bg-gray-900/50 rounded p-3 font-mono text-sm text-gray-300">
-                        {cmd.example}
-                    </div>
-                    {cmd.parameters && cmd.parameters?.length > 0 && (
-                        <>
-                            <p className="text-gray-500 mt-4 mb-2">Parameter:</p>
-                            <div className="space-y-2">
-                                {cmd.parameters?.map((param, index) => (
-                                    <div key={index} className="text-sm">
-                                        <span className="text-blue-400">{param.name}</span>
-                                        <span className="text-gray-300"> - {param.description}</span>
-                                        <span className={`ml-2 text-xs ${param.required ? 'text-red-400' : 'text-gray-500'}`}>
+                <p className="text-gray-500 mb-2">Beispiel:</p>
+                {/* Example command */}
+                <div className="bg-gray-900/50 rounded p-3 font-mono text-sm text-gray-300 flex items-center gap-2">
+                    {
+                        cmd.name.startsWith("/") ? (
+                            cmd.parameters && cmd.parameters.length > 0 ? (
+                                <>
+                                    {cmd.name}
+                                    {
+                                        cmd.parameters.map((param, index) => (
+                                            <span
+                                                key={index}
+                                                className="bg-blue-500/20 text-blue-300 text-sm pl-2 rounded-md mr-2 flex items-center gap-2"
+                                            >
+                                                {param.name}:
+                                                {
+                                                    param.example &&
+                                                    <span
+                                                        className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md "
+                                                    >
+                                                    {param.example}
+                                                </span>
+                                                }
+                                            </span>
+                                        ))
+                                    }
+                                </>
+                            ) : (
+                                cmd.name
+                            )
+                        ) : (
+                            <>
+                                {cmd.parameters && cmd.parameters.length > 0 ? (
+                                    `${cmd.name} ${cmd.parameters.map(param => param.example || `<${param.name}>`).join(' ')}`
+                                ) : (
+                                    cmd.name
+                                )}
+                            </>
+                        )
+                    }
+                </div>
+                {cmd.parameters && cmd.parameters?.length > 0 && (
+                    <>
+                        <p className="text-gray-500 mt-4 mb-2">Parameter:</p>
+                        <div className="space-y-2">
+                            {cmd.parameters?.map((param, index) => (
+                                <div key={index} className="text-sm">
+                                    <span className="text-blue-400">{param.name}</span>
+                                    <span className="text-gray-300"> - {param.description}</span>
+                                    <span
+                                        className={`ml-2 text-xs ${param.required ? 'text-red-400' : 'text-gray-500'}`}>
                                             {param.required ? '(required)' : '(optional)'}
                                         </span>
-                                    </div>
-                                ))}
-                            </div>
-                        </>
-                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </>
+                )}
             </div>
         ))}
     </div>

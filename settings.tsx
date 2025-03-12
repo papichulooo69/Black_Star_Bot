@@ -10,12 +10,12 @@ export interface Banner {
 export interface Command {
     name: string;
     description: string;
-    example: string;
     categories: string[];
     parameters?: {
         name: string;
         description: string;
         required: boolean;
+        example?: string;
     }[]
 }
 
@@ -67,65 +67,58 @@ export const COMMANDS: Command[] = [
     {
         name: "/hilfe",
         description: "Zeigt dir alle wichtigen Informationen zum Bot.",
-        example: "/hilfe",
         categories: ["Hilfe", "Bot"],
     },
     {
         name: "/status",
         description: "Zeigt dir Informationen über den Bot an.",
-        example: "/status",
         categories: ["Bot"]
     },
     {
         name: "/bewerbung",
         description: "Schicke eine bewerbung für das Discord Server Team ab.",
-        example: "/bewerbung",
         categories: ["Bewerbung", "Team"]
     },
     {
         name: "/user-report",
         description: "Melde einen User auf Grund von Fehlverhalten.",
-        example: "/user-report User: Grund:",
         categories: ["Report"],
         parameters: [{
             name: "User",
             description: "Wen möchtest du Melden?",
-            required: true
+            required: true,
+            example: "@Paul"
         },
         {
             name: "Grund",
             description: "Warum soll der User gemldet werden?",
-            required: true
+            required: true,
+            example: "Spam"
         }]
     },
     {
         name: "/developer",
         description: "Zeigt dir die Developer des HTWK Bots an.",
-        example: "/developer",
-        categories: ["Developer", "Bot"], 
+        categories: ["Developer", "Bot"]
     },
         {
         name: "!verify",
             description: "Verifiziere dich, um den Server komplett nutzen zu können.",
-        example: "!verify",
             categories: ["Verifizieren", "Mitglieder"]
     },
     {
         name: "!clear",
         description: "Lösche als Moderator ungewünschte Nachrichten aus dem Chat.",
-        example: "!clear + Zahl (+ Username)",
         categories: ["Moderator", "Team"]
     },
     {
         name: "!slowmode",
         description: "Verändere als Moderator die Schreibgeschwindigkeit des Chats.",
-        example: "!slowmode + Zahl (sek.)",
         categories: ["Moderator", "Team"]
     },
     {
         name: "!de, !eng, !fr, !esp",
         description: "Verändere als Moderator die Schreibgeschwindigkeit des Chats.",
-        example: "!slowmode + Zahl (sek.)",
         categories: ["Mitglieder"],
             parameters: [{
         name: "User",
