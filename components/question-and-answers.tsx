@@ -4,6 +4,7 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/c
 import {QUESTIONS_AND_ANSWERS} from "@/settings"
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 const QuestionAndAnswers = () => {
     return (
@@ -26,7 +27,11 @@ const QuestionAndAnswers = () => {
                             {qa.question}
                         </AccordionTrigger>
                         <AccordionContent className="px-6 pb-4 text-gray-300">
-                            <Markdown remarkPlugins={[remarkGfm]}>{qa.answer}</Markdown>
+                            <div className="markdown">
+                                <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+                                    {qa.answer}
+                                </Markdown>
+                            </div>
                         </AccordionContent>
                     </AccordionItem>
                 ))}
