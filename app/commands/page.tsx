@@ -1,16 +1,39 @@
-"use client";
+"use client"
 
-import {Check, Copy} from "lucide-react";
-import {useState} from "react";
 import {COMMANDS} from "@/settings";
+import {useState} from "react";
+import {Check, Copy} from "lucide-react";
 
 export default function CommandsPage() {
     const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
     const copyCommand = (command: string) => {
         navigator.clipboard.writeText(command).then(r => r);
         setCopiedCommand(command);
         setTimeout(() => setCopiedCommand(null), 2000);
+    };
+
+    // Get unique categories from all commands
+    const allCategories = Array.from(
+        new Set(COMMANDS.flatMap(cmd => cmd.categories))
+    );
+
+    // Filter commands based on search term and selected categories
+    const filteredCommands = COMMANDS.filter(cmd => {
+        const matchesSearch = cmd.name.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategories = selectedCategories.length === 0 ||
+            cmd.categories.some(cat => selectedCategories.includes(cat));
+        return matchesSearch && matchesCategories;
+    });
+
+    const toggleCategory = (category: string) => {
+        setSelectedCategories(prev =>
+            prev.includes(category)
+                ? prev.filter(c => c !== category)
+                : [...prev, category]
+        );
     };
 
     return (
@@ -23,8 +46,34 @@ export default function CommandsPage() {
                     </p>
                 </div>
 
+                <div className="mb-8 space-y-4">
+                    <input
+                        type="text"
+                        placeholder="Suche nach Befehlen..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                    />
+
+                    <div className="flex flex-wrap gap-2">
+                        {allCategories.map((category) => (
+                            <button
+                                key={category}
+                                onClick={() => toggleCategory(category)}
+                                className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                                    selectedCategories.includes(category)
+                                        ? 'bg-blue-500 text-white'
+                                        : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700'
+                                }`}
+                            >
+                                {category}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {COMMANDS.map((cmd) => (
+                    {filteredCommands.map((cmd) => (
                         <div
                             key={cmd.name}
                             className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700"
@@ -34,15 +83,14 @@ export default function CommandsPage() {
                                     <h3 className="text-xl font-semibold text-white mb-2">
                                         {cmd.name}
                                     </h3>
-                                    {
-                                        cmd.categories.map((category, index) => (
-                                            <span
-                                                key={index}
-                                                className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">
-                                                {category}
-                                            </span>
-                                        ))
-                                    }
+                                    {cmd.categories.map((category, index) => (
+                                        <span
+                                            key={index}
+                                            className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2"
+                                        >
+                                                                                    {category}
+                                                                                </span>
+                                    ))}
                                     <p className="text-gray-300 mb-4">{cmd.description}</p>
                                 </div>
                                 <button
