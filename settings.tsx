@@ -67,22 +67,22 @@ export const COMMANDS: Command[] = [
     {
         name: "/hilfe",
         description: "Zeigt dir alle wichtigen Informationen zum Bot.",
-        categories: ["Hilfe", "Bot"],
+        categories: ["Hilfe", "Bot", "Mitglieder"],
     },
     {
         name: "/status",
         description: "Zeigt dir Informationen über den Bot an.",
-        categories: ["Bot"]
+        categories: ["Bot", "Mitglieder"]
     },
     {
         name: "/bewerbung",
         description: "Schicke eine bewerbung für das Discord Server Team ab.",
-        categories: ["Bewerbung", "Team"]
+        categories: ["Bewerbung", "Team", "Mitglieder"]
     },
     {
         name: "/user-report",
         description: "Melde einen User auf Grund von Fehlverhalten.",
-        categories: ["Report"],
+        categories: ["Report", "Mitglieder"],
         parameters: [{
             name: "User",
             description: "Wen möchtest du Melden?",
@@ -189,7 +189,7 @@ export const STATS = [
     {
         title: "Bots",
         value: "4",
-        icon: MessageSquare,
+        icon: Bot,
     },
     {
         title: "Developer",
@@ -205,14 +205,6 @@ export const QUESTIONS_AND_ANSWERS = [
     },
     {
         question: "Wer sind die Developer des Projekts?",
-        answer: "Paul (pul_pler) \n Collin (itadori) \n Max (sifu_max)",
-    },
-    {
-        question: "What is the refund policy?",
-        answer: "Our refund policy allows for refunds within 30 days of purchase. Please refer to our refund policy page for more details.",
-    },
-    {
-        question: "How do I change my email address?",
-        answer: "To change your email address, go to your account settings and update your email under 'Account Information'.",
+        answer: "• Paul - Discord Username: paul_pler </br> • [Colin](https://colin.heggli.dev/) - Discord Username: itadori </br> • Max - Discord Username: sifu_max",
     }
 ]

@@ -1,3 +1,4 @@
+import { DISCORD_LINK } from "@/settings";
 import { ArrowRight, School } from "lucide-react";
 import Link from "next/link";
 
@@ -15,7 +16,7 @@ const Hero = () => {
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                     <Link
-                        href="https://discord.gg/your-invite-link"
+                        href={DISCORD_LINK}
                         className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
                     >
                         Join our Discord Server

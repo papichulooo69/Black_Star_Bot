@@ -10,9 +10,9 @@ const QuestionAndAnswers = () => {
     return (
         <>
             <div className="text-center mb-16">
-                <h1 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h1>
+                <h1 className="text-4xl font-bold text-white mb-4">Questions and Answers</h1>
                 <p className="text-xl text-gray-300">
-                    Find answers to common questions about our services
+                    Hilft dir bei allgemeinen Fragen
                 </p>
             </div>
 
