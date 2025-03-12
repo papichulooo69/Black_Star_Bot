@@ -134,7 +134,7 @@ const CommandsList = ({commands, copyCommand, copiedCommand}: {
     copyCommand: (command: string) => void,
     copiedCommand: string | null
 }) => {
-    return <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    return <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {commands.map((cmd) => (
             <div
                 key={cmd.name}
