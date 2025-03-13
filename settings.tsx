@@ -70,33 +70,6 @@ export const COMMANDS: Command[] = [
         categories: ["Hilfe", "Bot", "Mitglieder"],
     },
     {
-        name: "/status",
-        description: "Zeigt dir Informationen über den Bot an.",
-        categories: ["Bot", "Mitglieder"]
-    },
-    {
-        name: "/bewerbung",
-        description: "Schicke eine bewerbung für das Discord Server Team ab.",
-        categories: ["Bewerbung", "Team", "Mitglieder"]
-    },
-    {
-        name: "/user-report",
-        description: "Melde einen User auf Grund von Fehlverhalten.",
-        categories: ["Report", "Mitglieder"],
-        parameters: [{
-            name: "User",
-            description: "Wen möchtest du Melden?",
-            required: true,
-            example: "@Max"
-        },
-        {
-            name: "Grund",
-            description: "Warum soll der User gemldet werden?",
-            required: true,
-            example: "Spam"
-        }]
-    },
-    {
         name: "/verify-email",
         description: "Gib deine Hochschul-E-Mail Adresse ein, um dich als Student zu verifizieren. schau dazu in dein Mail-Postfach.",
         categories: ["Verifizieren", "Mitglieder"],
@@ -117,6 +90,33 @@ export const COMMANDS: Command[] = [
             required: true,
             example: "7i92djw2"
         }]
+    },
+    {
+        name: "/user-report",
+        description: "Melde einen User auf Grund von Fehlverhalten.",
+        categories: ["Report", "Mitglieder"],
+        parameters: [{
+            name: "user",
+            description: "Wen möchtest du Melden?",
+            required: true,
+            example: "@Max"
+        },
+        {
+            name: "grund",
+            description: "Warum soll der User gemldet werden?",
+            required: true,
+            example: "Spam"
+        }]
+    },
+    {
+        name: "/bewerbung",
+        description: "Schicke eine bewerbung für das Discord Server Team ab.",
+        categories: ["Bewerbung", "Team", "Mitglieder"]
+    },
+    {
+        name: "/status",
+        description: "Zeigt dir Informationen über den Bot an.",
+        categories: ["Bot", "Mitglieder"]
     },
     {
         name: "/developer",
@@ -159,7 +159,7 @@ export const COMMANDS: Command[] = [
     {
         name: "!de",
         description: "Lass dir die Nachricht eines Users ins Deutsche übersetzen.",
-        categories: ["Mitglieder"],
+        categories: ["Übersetzten", "Mitglieder"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",
@@ -170,7 +170,7 @@ export const COMMANDS: Command[] = [
         {
         name: "!eng",
         description: "Lass dir die Nachricht eines Users ins Englische übersetzen.",
-        categories: ["Mitglieder"],
+            categories: ["Übersetzten", "Mitglieder"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",
@@ -181,7 +181,7 @@ export const COMMANDS: Command[] = [
         {
         name: "!fr",
             description: "Lass dir die Nachricht eines Users ins Französische übersetzen.",
-        categories: ["Mitglieder"],
+            categories: ["Übersetzten", "Mitglieder"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",
@@ -192,7 +192,7 @@ export const COMMANDS: Command[] = [
         {
         name: "!esp",
             description: "Lass dir die Nachricht eines Users ins Spanische übersetzen.",
-        categories: ["Mitglieder"],
+            categories: ["Übersetzten", "Mitglieder"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",
