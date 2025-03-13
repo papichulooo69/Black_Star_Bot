@@ -226,6 +226,14 @@ export const QUESTIONS_AND_ANSWERS = [
         answer: " Folge dazu einfach diesem Link: [Erstelle Deinen Account](https://support.discord.com/hc/de/articles/360033931551-Erste-Schritte#h_01H4RR2GE2FAK7DZ5W3765NGVT)",
     },
     {
+        question: "Was muss ich nach dem Beitrit tun?",
+        answer: `
+    - Folge den Anweisungen von Discord und gib dir die Rollen (Themen), die dich interessieren.
+    - Verwende dann den Prefix-Command !verify, um dich generell zu verifizieren.
+    - Wenn du darüber hinaus bereits Student der HTWK bist, kannst du dir mit dem Slash-Command /verify-email einen Code per Hochschul-E-Mail-Adresse schicken lassen und ihn dann mit /verify-token auf dem Discord Server verifizieren.
+        `,
+    },
+    {
         question: "Wer sind die Developer des Projekts?",
         answer: "• Paul - Discord Username: paul_pler </br> • [Colin](https://colin.heggli.dev/) - Discord Username: itadori </br> • Max - Discord Username: sifu_max",
     }
