@@ -97,6 +97,28 @@ export const COMMANDS: Command[] = [
         }]
     },
     {
+        name: "/verify-email",
+        description: "Gib deine Hochschul-E-Mail Adresse ein, um dich als Student zu verifizieren. schau dazu in dein Mail-Postfach.",
+        categories: ["Verifizieren", "Mitglieder"],
+        parameters: [{
+            name: "email",
+            description: "Gib deine Hochschul-E-Mail Adresse ein",
+            required: true,
+            example: ""
+        }]
+    },
+    {
+        name: "/verify-token",
+        description: "Gib deinen Token (Code) aus der zuvor gesendeten E-Mail hier ein.",
+        categories: ["Verifizieren", "Mitglieder"],
+        parameters: [{
+            name: "code",
+            description: "8stelliger Code siehe Mail-Postfach",
+            required: true,
+            example: "7i92djw2"
+        }]
+    },
+    {
         name: "/developer",
         description: "Zeigt dir die Developer des HTWK Bots an.",
         categories: ["Developer", "Bot"]
