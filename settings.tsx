@@ -163,7 +163,7 @@ export const COMMANDS: Command[] = [
     },
         {
         name: "!verify",
-            description: "Verifiziere dich, um den Server komplett nutzen zu können.",
+            description: "Verifiziere dich, um den Server komplett nutzen zu können. Schreibe dafür diesen Befehl in einen Kanal des Servers.",
             categories: ["Verifizieren", "Mitglieder"]
     },
     {
