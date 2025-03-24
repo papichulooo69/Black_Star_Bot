@@ -70,6 +70,11 @@ export const COMMANDS: Command[] = [
         categories: ["Hilfe", "Bot", "Mitglieder"],
     },
     {
+        name: "/einleitung",
+        description: "Zeigt dir, was du nach dem Beitrit machen musst, um den Server nutzen zu können (und weitere Funktionen).",
+        categories: ["Hilfe", "Verifizieren", "Mitglieder"]
+    },
+    {
         name: "/verify-email",
         description: "Gib deine Hochschul-E-Mail Adresse ein, um dich als Student zu verifizieren. schau dazu in dein Mail-Postfach.",
         categories: ["Verifizieren", "Mitglieder"],
@@ -114,6 +119,39 @@ export const COMMANDS: Command[] = [
         categories: ["Bewerbung", "Team", "Mitglieder"]
     },
     {
+        name: "/create-channel",
+        description: "Erstelle private Textkanäle für dich und eine Freunde.",
+        categories: ["Mitglieder"],
+        parameters: [{
+            name: "name",
+            description: "Wie soll dein Kanal heißen?",
+            required: true,
+            example: "Projekt Mensa"
+        }]
+    },
+    {
+        name: "/join-channel",
+        description: "Trete privaten Textkanälen bei.",
+        categories: ["Mitglieder"],
+        parameters: [{
+            name: "password",
+            description: "Nenne das Passwort für den jeweiligen Kanal.",
+            required: true,
+            example: "PEOuLQWNyd"
+        }]
+    },
+    {
+        name: "/voice-limit",
+        description: "Bestimme ein Benutzerlimit für einen Voice-Kanal.",
+        categories: ["Mitglieder"],
+        parameters: [{
+            name: "limit",
+            description: "Bestimme das Benutzerlimit",
+            required: true,
+            example: "5"
+        }]
+    },
+    {
         name: "/status",
         description: "Zeigt dir Informationen über den Bot an.",
         categories: ["Bot", "Mitglieder"]
@@ -155,6 +193,11 @@ export const COMMANDS: Command[] = [
             required: true,
             example: "10 "
         }]
+    },
+    {
+        name: "!delete",
+        description: "Lösche den von dir erstellten Textkanal.",
+        categories: ["Mitglieder"]
     },
     {
         name: "!de",
@@ -228,7 +271,7 @@ export const QUESTIONS_AND_ANSWERS = [
     {
         question: "Was muss ich nach dem Beitrit tun?",
         answer: `
-    - Folge den Anweisungen von Discord und gib dir die Rollen (Themen), die dich interessieren.
+    * Folge den Anweisungen von Discord und gib dir die Rollen (Themen), die dich interessieren.
     - Verwende dann den Prefix-Command !verify, um dich generell zu verifizieren.
     - Wenn du darüber hinaus bereits Student der HTWK bist, kannst du dir mit dem Slash-Command /verify-email einen Code per Hochschul-E-Mail-Adresse schicken lassen und ihn dann mit /verify-token auf dem Discord Server verifizieren.
         `,
