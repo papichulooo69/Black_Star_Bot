@@ -196,7 +196,7 @@ export const COMMANDS: Command[] = [
     },
     {
         name: "!delete",
-        description: "Lösche den von dir erstellten Textkanal.",
+        description: "Lösche den von dir erstellten privaten Textkanal.",
         categories: ["Mitglieder"]
     },
     {
