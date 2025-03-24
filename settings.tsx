@@ -131,7 +131,7 @@ export const COMMANDS: Command[] = [
     },
     {
         name: "/join-channel",
-        description: "Trete privaten Textkanälen bei.",
+        description: "Trete einem privaten Textkanälen bei.",
         categories: ["Mitglieder"],
         parameters: [{
             name: "password",
