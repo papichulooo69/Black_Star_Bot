@@ -19,15 +19,13 @@ export interface Command {
     }[]
 }
 
-export const DISCORD_LINK = "https://discord.gg/eenP4pu7k7";
-export const WEBSITE_LINK = "https://www.htwk-leipzig.de";
-export const GITHUB_LINK = "https://github.com/Hochschule-HTWK-Leipzig"
+export const DISCORD_LINK = "https://discord.gg/MtSnNfYttt";
+export const BOT_INVITE_LINK = "https://discord.com/oauth2/authorize?client_id=1366051950751121418";
+// export const WEBSITE_LINK = "https://www.htwk-leipzig.de";
+// export const GITHUB_LINK = "https://github.com/Hochschule-HTWK-Leipzig"
 
 export const BANNERS: Banner[] = [
-    {
-        title: "⚠️ Inoffizielles Projekt - Nicht offiziell mit der HTWK Leipzig verbunden",
-        color: "yellow"
-    }
+    // Banner removed
 ]
 
 export const FEATURES = [

@@ -10,7 +10,6 @@ const Banners = () => {
                 (banner, index) => (
                     <div key={index} className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-800">
                         <div className={cn("py-2 px-4 text-center text-sm", {
-                            "bg-yellow-500/10 text-yellow-200": banner.color === "yellow",
                             "bg-red-500/10 text-red-200": banner.color === "red",
                             "bg-green-500/10 text-green-200": banner.color === "green",
                             "bg-slate-500/10 text-slate-200": banner.color === "slate",

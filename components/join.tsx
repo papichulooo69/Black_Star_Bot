@@ -8,11 +8,10 @@ const Join = () => {
             <div
                 className="bg-slate-600/20 rounded-lg p-8 text-center backdrop-blur-sm border border-slate-500/20">
                 <h2 className="text-2xl font-bold text-white mb-4">
-                    Bist du bereit, deine Universitätszeit zu verbessern?
+                    Bist du bereit, deinen Discord Server auf ein neues Level zu bringen?
                 </h2>
                 <p className="text-gray-300 mb-8">
-                    Tritt dem HTWK-Server bei und entdecke viele coole Dinge. Lerne neue Leute kennen und hilf uns, den
-                    Server zu einem tollen Ort zu machen!
+                    Benutze
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <Link
