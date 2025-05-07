@@ -1,8 +1,8 @@
 "use client";
 
-import {Command, COMMANDS} from "@/settings";
-import {useState} from "react";
-import {Check, Copy} from "lucide-react";
+import { Command, COMMANDS } from "@/settings";
+import { useState } from "react";
+import { Check, Copy } from "lucide-react";
 
 export default function CommandsPage() {
     const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
@@ -70,7 +70,7 @@ export default function CommandsPage() {
                         placeholder="Suche nach Befehlen..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                        className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-slate-500"
                     />
 
                     <div className="flex flex-wrap gap-2">
@@ -78,11 +78,10 @@ export default function CommandsPage() {
                             <button
                                 key={category}
                                 onClick={() => toggleCategory(category)}
-                                className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                                    selectedCategories.includes(category)
-                                        ? "bg-blue-500 text-white"
+                                className={`px-3 py-1 rounded-full text-sm transition-colors ${selectedCategories.includes(category)
+                                        ? "bg-slate-500 text-white"
                                         : "bg-gray-800/50 text-gray-300 hover:bg-gray-700"
-                                }`}
+                                    }`}
                             >
                                 {category}
                             </button>
@@ -95,10 +94,10 @@ export default function CommandsPage() {
                     <div className="mb-10">
                         <h2 className="text-2xl font-bold text-white mb-6">
                             Slash Commands{" "}<span
-                            className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">/</span>
+                                className="inline-block bg-slate-500/20 text-slate-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">/</span>
                         </h2>
                         <CommandsList commands={filteredCommands.slashCommands} copyCommand={copyCommand}
-                                      copiedCommand={copiedCommand}/>
+                            copiedCommand={copiedCommand} />
                     </div>
                 )}
 
@@ -107,10 +106,10 @@ export default function CommandsPage() {
                     <div>
                         <h2 className="text-2xl font-bold text-white mb-6">
                             Prefix Commands{" "}<span
-                            className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">!</span>
+                                className="inline-block bg-slate-500/20 text-slate-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">!</span>
                         </h2>
                         <CommandsList commands={filteredCommands.prefixCommands} copyCommand={copyCommand}
-                                      copiedCommand={copiedCommand}/>
+                            copiedCommand={copiedCommand} />
                     </div>
                 )}
 
@@ -128,7 +127,7 @@ export default function CommandsPage() {
     );
 }
 
-const CommandsList = ({commands, copyCommand, copiedCommand}: {
+const CommandsList = ({ commands, copyCommand, copiedCommand }: {
     commands: Command[],
     copyCommand: (command: string) => void,
     copiedCommand: string | null
@@ -147,10 +146,10 @@ const CommandsList = ({commands, copyCommand, copiedCommand}: {
                         {cmd.categories.map((category, index) => (
                             <span
                                 key={index}
-                                className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md mr-2 mb-2"
+                                className="inline-block bg-slate-500/20 text-slate-300 text-sm px-2 py-1 rounded-md mr-2 mb-2"
                             >
-                          {category}
-                        </span>
+                                {category}
+                            </span>
                         ))}
                         <p className="text-gray-300 mb-4">{cmd.description}</p>
                     </div>
@@ -160,9 +159,9 @@ const CommandsList = ({commands, copyCommand, copiedCommand}: {
                         title="Copy example command"
                     >
                         {copiedCommand === cmd.name ? (
-                            <Check className="h-5 w-5"/>
+                            <Check className="h-5 w-5" />
                         ) : (
-                            <Copy className="h-5 w-5"/>
+                            <Copy className="h-5 w-5" />
                         )}
                     </button>
                 </div>
@@ -178,16 +177,16 @@ const CommandsList = ({commands, copyCommand, copiedCommand}: {
                                         cmd.parameters.map((param, index) => (
                                             <span
                                                 key={index}
-                                                className="bg-blue-500/20 text-blue-300 text-sm pl-2 rounded-md mr-2 flex items-center gap-2"
+                                                className="bg-slate-500/20 text-slate-300 text-sm pl-2 rounded-md mr-2 flex items-center gap-2"
                                             >
                                                 {param.name}:
                                                 {
                                                     param.example &&
                                                     <span
-                                                        className="inline-block bg-blue-500/20 text-blue-300 text-sm px-2 py-1 rounded-md "
+                                                        className="inline-block bg-slate-500/20 text-slate-300 text-sm px-2 py-1 rounded-md "
                                                     >
-                                                    {param.example}
-                                                </span>
+                                                        {param.example}
+                                                    </span>
                                                 }
                                             </span>
                                         ))
@@ -213,12 +212,12 @@ const CommandsList = ({commands, copyCommand, copiedCommand}: {
                         <div className="space-y-2">
                             {cmd.parameters?.map((param, index) => (
                                 <div key={index} className="text-sm">
-                                    <span className="text-blue-400">{param.name}</span>
+                                    <span className="text-slate-400">{param.name}</span>
                                     <span className="text-gray-300"> - {param.description}</span>
                                     <span
                                         className={`ml-2 text-xs ${param.required ? 'text-red-400' : 'text-gray-500'}`}>
-                                            {param.required ? '(required)' : '(optional)'}
-                                        </span>
+                                        {param.required ? '(required)' : '(optional)'}
+                                    </span>
                                 </div>
                             ))}
                         </div>

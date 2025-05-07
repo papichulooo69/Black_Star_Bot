@@ -1,10 +1,10 @@
-import {BellDot, BookOpenText, LibraryBig, ServerIcon, MessageSquare, Users, UsersIcon, Zap, Bot} from "lucide-react";
+import { BellDot, BookOpenText, LibraryBig, ServerIcon, MessageSquare, Users, UsersIcon, Zap, Bot } from "lucide-react";
 // https://lucide.dev/
 export interface Banner {
     title: string;
     link?: string;
     linkText?: string;
-    color: "red" | "green" | "blue" | "yellow" | "purple" | "pink" | "gray"
+    color: "red" | "green" | "slate" | "yellow" | "purple" | "pink" | "gray"
 }
 
 export interface Command {
@@ -161,10 +161,10 @@ export const COMMANDS: Command[] = [
         description: "Zeigt dir die Developer des HTWK Bots an.",
         categories: ["Developer", "Bot"]
     },
-        {
+    {
         name: "!verify",
-            description: "Verifiziere dich, um den Server komplett nutzen zu können. Schreibe dafür diesen Befehl in einen Kanal des Servers.",
-            categories: ["Verifizieren", "Mitglieder"]
+        description: "Verifiziere dich, um den Server komplett nutzen zu können. Schreibe dafür diesen Befehl in einen Kanal des Servers.",
+        categories: ["Verifizieren", "Mitglieder"]
     },
     {
         name: "!clear",
@@ -210,10 +210,10 @@ export const COMMANDS: Command[] = [
             example: " "
         }]
     },
-        {
+    {
         name: "!eng",
         description: "Lass dir die Nachricht eines Users ins Englische übersetzen.",
-            categories: ["Übersetzten", "Mitglieder"],
+        categories: ["Übersetzten", "Mitglieder"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",
@@ -221,10 +221,10 @@ export const COMMANDS: Command[] = [
             example: " "
         }]
     },
-        {
+    {
         name: "!fr",
-            description: "Lass dir die Nachricht eines Users ins Französische übersetzen.",
-            categories: ["Übersetzten", "Mitglieder"],
+        description: "Lass dir die Nachricht eines Users ins Französische übersetzen.",
+        categories: ["Übersetzten", "Mitglieder"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",
@@ -232,10 +232,10 @@ export const COMMANDS: Command[] = [
             example: " "
         }]
     },
-        {
+    {
         name: "!esp",
-            description: "Lass dir die Nachricht eines Users ins Spanische übersetzen.",
-            categories: ["Übersetzten", "Mitglieder"],
+        description: "Lass dir die Nachricht eines Users ins Spanische übersetzen.",
+        categories: ["Übersetzten", "Mitglieder"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",

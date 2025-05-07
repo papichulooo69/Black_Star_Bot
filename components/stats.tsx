@@ -1,6 +1,6 @@
-import {STATS} from "@/settings";
+import { STATS } from "@/settings";
 import CountUp from "react-countup";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 
 const Stats = () => {
@@ -16,7 +16,7 @@ const Stats = () => {
                         className="bg-gray-800/50 rounded-lg p-8 text-center backdrop-blur-sm border border-gray-700 hover:border-gray-600 transition-colors"
                     >
                         <div className="flex justify-center mb-4">
-                            <stat.icon className="h-8 w-8 text-blue-500"/>
+                            <stat.icon className="h-8 w-8 text-slate-500" />
                         </div>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

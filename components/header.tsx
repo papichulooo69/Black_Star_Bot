@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { GraduationCap } from "lucide-react";
-import {DISCORD_LINK, GITHUB_LINK, WEBSITE_LINK} from "@/settings";
+import { DISCORD_LINK, GITHUB_LINK, WEBSITE_LINK } from "@/settings";
 import React from "react";
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
             <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
                     <Link href="/" className="flex items-center space-x-2">
-                        <GraduationCap className="h-8 w-8 text-blue-500"/>
+                        <GraduationCap className="h-8 w-8 text-slate-500" />
                         <span className="text-white font-semibold">HTWK Discord Server</span>
                     </Link>
                     <div className="hidden md:flex ml-8 space-x-4">
@@ -46,7 +46,7 @@ const Header = () => {
                     </Link>
                     <Link
                         href={DISCORD_LINK}
-                        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-slate-600 hover:bg-slate-700 transition-colors"
                     >
                         Join Discord Server
                     </Link>
