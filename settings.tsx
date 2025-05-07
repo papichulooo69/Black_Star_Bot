@@ -31,176 +31,238 @@ export const BANNERS: Banner[] = [
 export const FEATURES = [
     {
         title: "Allgemeine Information",
-        description: "Falls ihr schon Studenten der HTWK seid oder auch nicht, ist völlig egal, hier könnt ihr euch austauschen, informieren und gemeinsam Spaß haben!",
+        description: "Der Bot wurde am 27.04.2025 in Betrieb genommen und verfügt über viele Funktionen, die dir helfen werden, deinen Server zu verbessern.",
         Icon: BookOpenText,
     },
     {
         title: "Community Engagement",
-        description: "Nimm an spannenden Diskussionen teil, stelle Fragen und vernetze dich mit anderen Studenten.",
+        description: "Falls du Fragen zum Bot hast, neue Ideen ansprechen möchtest oder Probeleme bei der Installation hast, kannst du gerne dem Discord Server beitreten.",
         Icon: Users,
     },
     {
         title: "Benachrichtigungen",
-        description: "Du kannst über folgende Themen informieren: Offizielle News, StuRa News, FSR News, HTWK-Bot News, Umfragen und Giveaways.",
+        description: "Werde zu allgemeinen Discord Updates und Bot Changelogs benachrichtigt.",
         Icon: BellDot,
     },
     {
-        title: "Studiengänge",
-        description: "Auf dem Server gibt es für jeden Studiengang (Bachelor und Master) einen eigenen Kanal zum informieren und austauschen.",
+        title: "Sonstiges",
+        description: "Auf dem Discord Server gibt es zudem noch eine Community Kategorie, in der du dich mit anderen Usern austauschen kannst.",
         Icon: LibraryBig,
-    },
-    {
-        title: "Question and Answer",
-        description: "Erhalte schnelle Antworten auf häufig gestellte Fragen zur Universität, zu Kursen und Campuseinrichtungen.",
-        Icon: Zap,
-    },
-    {
-        title: "HTWK Leipzig Bot",
-        description: "Der HTWK Leipzig Discord Server verfügt über ein eigenes Bot-System. ",
-        Icon: Bot,
     }
 ]
 
 export const COMMANDS: Command[] = [
     {
         name: "/hilfe",
-        description: "Zeigt dir alle wichtigen Informationen zum Bot.",
-        categories: ["Hilfe", "Bot", "Mitglieder"],
+        description: "Zeigt eine Liste aller verfügbaren Bot-Funktionen.",
+        categories: ["Bot"],
     },
     {
-        name: "/einleitung",
-        description: "Zeigt dir, was du nach dem Beitrit machen musst, um den Server nutzen zu können (und weitere Funktionen).",
-        categories: ["Hilfe", "Verifizieren", "Mitglieder"]
+        name: "/status",
+        description: "Zeigt den aktuellen Bot-Status an.",
+        categories: ["Bot"]
     },
     {
-        name: "/verify-email",
-        description: "Gib deine Hochschul-E-Mail Adresse ein, um dich als Student zu verifizieren. schau dazu in dein Mail-Postfach.",
-        categories: ["Verifizieren", "Mitglieder"],
-        parameters: [{
-            name: "email",
-            description: "Gib deine Hochschul-E-Mail Adresse ein",
-            required: true,
-            example: ""
-        }]
-    },
-    {
-        name: "/verify-token",
-        description: "Gib deinen Token (Code) aus der zuvor gesendeten E-Mail hier ein.",
-        categories: ["Verifizieren", "Mitglieder"],
-        parameters: [{
-            name: "code",
-            description: "8stelliger Code siehe Mail-Postfach",
-            required: true,
-            example: "7i92djw2"
-        }]
-    },
-    {
-        name: "/user-report",
-        description: "Melde einen User auf Grund von Fehlverhalten.",
-        categories: ["Report", "Mitglieder"],
+        name: "/user-info",
+        description: "Zeigt detaillierte Informationen über einen Benutzer an.",
+        categories: ["Administratoren", "Moderatoren"],
         parameters: [{
             name: "user",
-            description: "Wen möchtest du Melden?",
+            description: "Gib einen User an",
             required: true,
-            example: "@Max"
+            example: "Max"
+        }]
+    },
+    {
+        name: "/show-setup",
+        description: "Zeigt die aktuellen Server-Konfigurationen an.",
+        categories: ["Setup Bot", "Administratoren"]
+    },
+    {
+        name: "/setup-roles",
+        description: "Konfiguriere die Server-Rollen für den Bot.",
+        categories: ["Setup Bot", "Administratoren"]
+    },
+    {
+        name: "/setup-channels",
+        description: "Konfiguriere die Server-Kanäle für den Bot.",
+        categories: ["Setup Bot", "Administratoren"]
+    },
+    {
+        name: "/setup-categorys ",
+        description: "Konfiguriere die Server-Kategorien für den Bot.",
+        categories: ["Setup Bot", "Administratoren"]
+    },
+    {
+        name: "/setup-stats",
+        description: "Konfiguriere Statistik-Kanäle für Mitgliederanzahl, Boosts und Bots.",
+        categories: ["Setup Bot", "Administratoren"],
+        parameters: [{
+            name: "option",
+            description: "Wähle, welche Statistiken angezeigt werden sollen.",
+            required: true,
+            example: "Nur Mitglieder",
+        }]
+    },
+    {
+        name: "/setup-autopublishing",
+        description: "Konfiguriere das automatische Veröffentlichen von Nachrichten in Ankündigungskanälen.",
+        categories: ["Setup Bot", "Administratoren"],
+        parameters: [{
+            name: "status",
+            description: "Autopublishing aktivieren oder deaktivieren.",
+            required: true,
+            example: "aktivieren",
+        }]
+    },
+    {
+        name: "/setup-verification",
+        description: "Konfiguriere ein Verifizierungssystem für den Server.",
+        categories: ["Setup Bot", "Administratoren"],
+    },
+    {
+        name: "/setup-discord-links",
+        description: "Konfiguriere das Löschen von Discord-Einladungslinks (Administratoren und Moderatoren ausgeschlossen).",
+        categories: ["Setup Bot", "Administratoren"],
+        parameters: [{
+            name: "status",
+            description: "Discord-Link Filterung aktivieren oder deaktivieren.",
+            required: true,
+            example: "aktivieren",
+        }]
+    },
+    {
+        name: "/setup-welcome-message ",
+        description: "Konfiguriere Willkommensnachrichten für neue Mitglieder.",
+        categories: ["Setup Bot", "Administratoren"],
+        parameters: [{
+            name: "status",
+            description: "Nachrichten aktivieren oder deaktivieren.",
+            required: true,
+            example: "aktivieren",
         },
         {
-            name: "grund",
-            description: "Warum soll der User gemldet werden?",
+            name: "ping_user",
+            description: "Soll der Benutzer in der Nachricht gepingt werden?",
+            required: true,
+            example: "Ja"
+        },
+        {
+            name: "show_thumbnail",
+            description: "Soll das Profilbild des Users in der Nachricht angezeigt werden?",
             required: true,
             example: "Spam"
         }]
     },
     {
-        name: "/bewerbung",
-        description: "Schicke eine bewerbung für das Discord Server Team ab.",
-        categories: ["Bewerbung", "Team", "Mitglieder"]
-    },
-    {
-        name: "/create-channel",
-        description: "Erstelle private Textkanäle für dich und eine Freunde.",
-        categories: ["Mitglieder"],
+        name: "/setup-autoreaction",
+        description: "Konfiguriere automatische Reaktionen auf Nachrichten in einem Kanal.",
+        categories: ["Setup Bot", "Administratoren"],
         parameters: [{
-            name: "name",
-            description: "Wie soll dein Kanal heißen?",
+            name: "status",
+            description: "Autoreaction aktivieren oder deaktivieren.",
             required: true,
-            example: "Projekt Mensa"
+            example: "aktivieren",
+        },
+        {
+            name: "emojis",
+            description: "Die Emojis, die automatisch hinzugefügt werden sollen.",
+            required: true,
+            example: "👍"
+        },
+        {
+            name: "content",
+            description: "Auf welche Nachrichten soll der Bot reagieren.",
+            required: true,
+            example: "Nur Text"
         }]
     },
     {
-        name: "/join-channel",
-        description: "Trete einem privaten Textkanälen bei.",
-        categories: ["Mitglieder"],
+        name: "/setup-advertising",
+        description: "Konfiguriere das automatische senden von Werbung im Werbekanal.",
+        categories: ["Setup Bot", "Administratoren"],
         parameters: [{
-            name: "password",
-            description: "Nenne das Passwort für den jeweiligen Kanal.",
+            name: "repetition",
+            description: "Wie oft soll die Werbung wiederholt werden?",
             required: true,
-            example: "PEOuLQWNyd"
+            example: "Alle 30 Minuten",
         }]
+    },
+    {
+        name: "/add-join2create",
+        description: "Verwandelt einen Voice-Channel in einen Join to Create Channel.",
+        categories: ["Setup Bot", "Administratoren", "Voice Channel"],
+        parameters: [{
+            name: "channel",
+            description: "Der Voice-Channel, der als Join to Create eingerichtet werden soll.",
+            required: true,
+            example: "Voice Channel 1",
+        }]
+    },
+    {
+        name: "/rename-join2create",
+        description: "Benennt deinen aktuellen temporären Voice-Channel um.",
+        categories: ["Setup Bot", "Administratoren", "Voice Channel"],
+    },
+    {
+        name: "/remove-join2create",
+        description: "Verwandelt einen Join to Create Channel zurück in einen normalen Voice-Channel.",
+        categories: ["Setup Bot", "Administratoren", "Voice Channel"],
+        parameters: [{
+            name: "channel",
+            description: "Der Voice-Channel, der als Join to Create eingerichtet werden soll.",
+            required: true,
+            example: "『🔊』Join to Create 1",
+        }]
+    },
+    {
+        name: "/voice-time",
+        description: "Zeigt dir, wie lange du in Voice-Channels verbracht hast.",
+        categories: ["Setup Bot", "Administratoren", "Voice Channel"],
     },
     {
         name: "/voice-limit",
-        description: "Bestimme ein Benutzerlimit für einen Voice-Kanal.",
-        categories: ["Mitglieder"],
+        description: "Zeigt dir, wie lange du in Voice-Channels verbracht hast.",
+        categories: ["Setup Bot", "Administratoren", "Voice Channel"],
+    },
+    {
+        name: "/moderation-panel",
+        description: "Öffnet ein Moderations-Panel für den ausgewählten Benutzer.",
+        categories: ["Administratoren", "Moderatoren"],
         parameters: [{
-            name: "limit",
-            description: "Bestimme das Benutzerlimit",
+            name: "user",
+            description: "Der Benutzer, für den Moderationsaktionen durchgeführt werden sollen.",
             required: true,
-            example: "5"
-        }]
-    },
-    {
-        name: "/status",
-        description: "Zeigt dir Informationen über den Bot an.",
-        categories: ["Bot", "Mitglieder"]
-    },
-    {
-        name: "/developer",
-        description: "Zeigt dir die Developer des HTWK Bots an.",
-        categories: ["Developer", "Bot"]
-    },
-    {
-        name: "!verify",
-        description: "Verifiziere dich, um den Server komplett nutzen zu können. Schreibe dafür diesen Befehl in einen Kanal des Servers.",
-        categories: ["Verifizieren", "Mitglieder"]
-    },
-    {
-        name: "!clear",
-        description: "Lösche als Moderator ungewünschte Nachrichten aus dem Chat.",
-        categories: ["Moderator", "Team"],
-        parameters: [{
-            name: "Zahl",
-            description: "Wie viele Nachrichten sollen gelöscht werden?",
-            required: true,
-            example: "10"
+            example: "Max",
         },
         {
-            name: "Username",
-            description: "Von wem sollen die Nachrichten gelöscht werden?",
-            required: false,
-            example: "max_mustermann"
-        }]
-    },
-    {
-        name: "!slowmode",
-        description: "Verändere als Moderator die Schreibgeschwindigkeit des Chats.",
-        categories: ["Moderator", "Team"],
-        parameters: [{
-            name: "Zeit",
-            description: "Wie hoch soll der Slowmode sein (in Sek.)?",
+            name: "action",
+            description: "Die Moderationsaktion, die durchgeführt werden soll.",
             required: true,
-            example: "10 "
+            example: "Timeout"
         }]
     },
     {
-        name: "!delete",
-        description: "Lösche den von dir erstellten privaten Textkanal.",
-        categories: ["Mitglieder"]
+        name: "/clear",
+        description: "Zeigt dir, wie lange du in Voice-Channels verbracht hast.",
+        categories: ["Administratoren", "Moderatoren"],
+        parameters: [{
+            name: "anzahl",
+            description: "Anzahl der zu löschenden Nachrichten.",
+            required: true,
+            example: "25",
+        },
+        {
+            name: "user",
+            description: "Lösche nur Nachrichten von diesem Benutzer.",
+            required: false,
+            example: "Max"
+        }]
     },
     {
         name: "!de",
         description: "Lass dir die Nachricht eines Users ins Deutsche übersetzen.",
-        categories: ["Übersetzten", "Mitglieder"],
+        categories: ["Mitglieder", "Übersetzten"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",
@@ -211,7 +273,7 @@ export const COMMANDS: Command[] = [
     {
         name: "!eng",
         description: "Lass dir die Nachricht eines Users ins Englische übersetzen.",
-        categories: ["Übersetzten", "Mitglieder"],
+        categories: ["Mitglieder", "Übersetzten"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",
@@ -222,7 +284,7 @@ export const COMMANDS: Command[] = [
     {
         name: "!fr",
         description: "Lass dir die Nachricht eines Users ins Französische übersetzen.",
-        categories: ["Übersetzten", "Mitglieder"],
+        categories: ["Mitglieder", "Übersetzten"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",
@@ -233,7 +295,7 @@ export const COMMANDS: Command[] = [
     {
         name: "!esp",
         description: "Lass dir die Nachricht eines Users ins Spanische übersetzen.",
-        categories: ["Übersetzten", "Mitglieder"],
+        categories: ["Mitglieder", "Übersetzten"],
         parameters: [{
             name: "Nachricht",
             description: "Antworte mit diesem Command auf eine Nachricht von einem User",
@@ -245,18 +307,18 @@ export const COMMANDS: Command[] = [
 
 export const STATS = [
     {
-        title: "Aktive Benutzer",
+        title: "Server Mitglieder",
         value: "30+",
         icon: UsersIcon,
     },
     {
-        title: "Bots",
-        value: "4",
+        title: "Server",
+        value: "7+",
         icon: Bot,
     },
     {
         title: "Developer",
-        value: "3+",
+        value: "2+",
         icon: ServerIcon,
     },
 ];
@@ -268,6 +330,6 @@ export const QUESTIONS_AND_ANSWERS = [
     },
     {
         question: "Wer sind die Developer des Projekts?",
-        answer: "• Paul - Discord Username: paul_pler </br> • [Colin](https://colin.heggli.dev/) - Discord Username: itadori </br> • Max - Discord Username: sifu_max",
+        answer: "• Paul - Discord Username: paul_pler </br> • [Colin](https://colin.heggli.dev/) - Discord Username: itadori",
     }
 ]

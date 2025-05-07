@@ -10,7 +10,7 @@ const Header = () => {
                 <div className="flex items-center">
                     <Link href="/" className="flex items-center space-x-2">
                         <GraduationCap className="h-8 w-8 text-slate-500" />
-                        <span className="text-white font-semibold">Discord Server</span>
+                        <span className="text-white font-semibold">Black Star Start</span>
                     </Link>
                     <div className="hidden md:flex ml-8 space-x-4">
                         <Link
