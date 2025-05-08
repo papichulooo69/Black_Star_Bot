@@ -142,17 +142,23 @@ export const COMMANDS: Command[] = [
             example: "aktivieren",
         },
         {
-            name: "ping_user",
+            name: "ping",
             description: "Soll der Benutzer in der Nachricht gepingt werden?",
             required: true,
             example: "Ja"
         },
         {
-            name: "show_thumbnail",
+            name: "thumbnail",
             description: "Soll das Profilbild des Users in der Nachricht angezeigt werden?",
             required: true,
             example: "Spam"
-        }]
+            },
+            {
+            name: "publisher",
+            description: "Wer soll als Herausgeber der Nachricht angezeigt werden?",
+            required: true,
+            example: "Server Besitzer"
+            }]
     },
     {
         name: "/setup-autoreaction",
@@ -224,6 +230,17 @@ export const COMMANDS: Command[] = [
         name: "/voice-limit",
         description: "Zeigt dir, wie lange du in Voice-Channels verbracht hast.",
         categories: ["Setup Bot", "Administratoren", "Voice Channel"],
+    },
+        {
+        name: "/send-news",
+        description: "Sendet eine Nachricht in den News-Kanal.",
+        categories: ["Setup Bot", "Administratoren"],
+        parameters: [{
+            name: "User (Du)",
+            description: "Wer soll als Herausgeber der News angezeigt werden?",
+            required: true,
+            example: "Max"
+        }]
     },
     {
         name: "/moderation-panel",
