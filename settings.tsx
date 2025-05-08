@@ -325,7 +325,7 @@ export const COMMANDS: Command[] = [
 export const STATS = [
     {
         title: "Server Mitglieder",
-        value: "30+",
+        value: "5+",
         icon: UsersIcon,
     },
     {
