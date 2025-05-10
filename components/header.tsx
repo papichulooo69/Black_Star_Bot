@@ -31,7 +31,9 @@ const Header = () => {
                         href={DISCORD_LINK}
                         className="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
                     >
-                        Join Discord Server <ArrowRight className="ml-2 h-5 w-5" />
+                        <span className="flex items-center justify-center">
+                            Join Discord Server <ArrowRight className="ml-2 h-5 w-5" />
+                        </span>
                     </Link>
                 </div>
             </div>

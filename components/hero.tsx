@@ -15,17 +15,21 @@ const Hero = () => {
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                     href={DISCORD_LINK}
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
+                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
                 >
-                    Join Discord Server
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <span className="flex items-center justify-center">
+                        Join Discord Server
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                    </span>
                 </Link>
                 <Link
                     href={BOT_INVITE_LINK}
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
+                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
                 >
-                    Invite Black Star
-                    <Bot className="ml-2 h-5 w-5" />
+                    <span className="flex items-center justify-center">
+                        Invite Black Star
+                        <Bot className="ml-2 h-5 w-5" />
+                    </span>
                 </Link>
             </div>
         </div>

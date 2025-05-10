@@ -43,7 +43,17 @@ const Footer = () => {
                 </div>
                 <div>
                     <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
-                    <p className="text-gray-400">
+                    <ul className="space-y-2">
+                        <li>
+                            <Link
+                                href="/terms"
+                                className="text-gray-400 hover:text-white transition-colors"
+                            >
+                                Terms of Service
+                            </Link>
+                        </li>
+                    </ul>
+                    <p className="text-gray-400 mt-2">
                         Diese Webseite ist offziell mit dem dazugehörigen Discord Server und Discord Bot verbunden.
                     </p>
                 </div>
