@@ -132,6 +132,28 @@ export const COMMANDS: Command[] = [
         }]
     },
     {
+        name: "/setup-poll",
+        description: "Erstellt eine Umfrage mit Reaktionen.",
+        categories: ["Setup Bot", "Administratoren"],
+        parameters: [{
+            name: "publisher",
+            description: "Wer soll als Herausgeber der Umfrage angezeigt werden?",
+            required: true,
+            example: "User (Du)",
+        }]
+    },
+    {
+        name: "/end-poll",
+        description: "Beendet eine Umfrage und zeigt die Ergebnisse an.",
+        categories: ["Setup Bot", "Administratoren"],
+        parameters: [{
+            name: "poll_id",
+            description: "Die ID der Umfrage (zu finden im Footer der Umfrage)",
+            required: true,
+            example: "1746834472",
+        }]
+    },
+    {
         name: "/setup-welcome-message ",
         description: "Konfiguriere Willkommensnachrichten für neue Mitglieder.",
         categories: ["Setup Bot", "Administratoren"],
