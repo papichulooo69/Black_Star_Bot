@@ -75,7 +75,7 @@ const Header = () => {
                             Start
                         </a>
                         {pathname === '/' && (
-                            <div className="absolute -bottom-[17px] left-0 w-full h-1 bg-blue-500"></div>
+                            <div className="absolute -bottom-1 left-0 w-full h-1 bg-blue-500"></div>
                         )}
                     </div>
                     <NavLink href="/commands" label="Commands" />

@@ -53,9 +53,6 @@ const Footer = () => {
                             </Link>
                         </li>
                     </ul>
-                    <p className="text-gray-400 mt-2">
-                        Diese Webseite ist offziell mit dem dazugehörigen Discord Server und Discord Bot verbunden.
-                    </p>
                 </div>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">

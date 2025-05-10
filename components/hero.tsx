@@ -12,7 +12,7 @@ const Hero = () => {
             <p className="text-xl text-gray-300">
                 Dein zuverlässiger Discord Bot
             </p>
-            <div className="mt-10 mb-32 flex flex-col sm:flex-row justify-center gap-4 mx-auto">
+            <div className="mt-20 mb-32 flex flex-col sm:flex-row justify-center gap-4 mx-auto">
                 <Link
                     href={DISCORD_LINK}
                     className="flex items-center justify-center px-6 py-3 text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
