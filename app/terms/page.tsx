@@ -18,43 +18,107 @@ export default function TermsPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">2. Nutzung des Bots</h2>
-                        <p>
-                            Der Black Star Bot wird "wie er ist" zur Verfügung gestellt. Wir behalten uns das Recht vor, jederzeit Änderungen vorzunehmen oder den Dienst einzustellen. Die Nutzung erfolgt auf eigene Gefahr.
+                        <h2 className="text-2xl font-bold text-white mb-4">2. Allgemeine Bestimmungen</h2>
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Bot-Nutzung:</strong>
+                            <span className="pl-4 block">Der Black Star Bot wird "wie er ist" zur Verfügung gestellt und darf ausschließlich auf Discord-Servern innerhalb der Discord-Nutzungsbedingungen verwendet werden.</span>
+                        </p>
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Änderungen:</strong>
+                            <span className="pl-4 block">Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit ohne vorherige Ankündigung zu ändern. Die fortgesetzte Nutzung des Bots nach solchen Änderungen gilt als Zustimmung zu den aktualisierten Bedingungen.</span>
+                        </p>
+                        <p className="ml-4">
+                            <strong className="text-white">Serverinformationen:</strong>
+                            <span className="pl-4 block">Der Bot speichert bestimmte Serverinformationen zur Funktionalität, darunter Server-ID, konfigurierte Rollen, Kanäle und Kategorien sowie benutzerspezifische Daten wie Voice-Channel-Zeiten.</span>
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">3. Verbotene Aktivitäten</h2>
-                        <p>
-                            Die Nutzung des Bots für jegliche illegalen Aktivitäten oder Aktivitäten, die gegen die Discord-Nutzungsbedingungen verstoßen, ist strengstens untersagt. Der Missbrauch des Bots kann zu einem permanenten Ausschluss führen.
+                        <h2 className="text-2xl font-bold text-white mb-4">3. Funktionalitäten und Nutzungsbeschränkungen</h2>
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Moderationsfunktionen:</strong>
+                            <span className="pl-4 block">Die Moderationsbefehle (wie Ban, Kick, Timeout) dürfen nur im Einklang mit den Discord Community-Richtlinien verwendet werden.</span>
+                        </p>
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Automatisierte Funktionen:</strong>
+                            <span className="pl-4 block">Funktionen wie Auto-Reaktionen, Auto-Publishing und automatische Werbung dürfen nicht zur Verbreitung von unerwünschten oder unangemessenen Inhalten genutzt werden.</span>
+                        </p>
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Voice-Funktionen:</strong>
+                            <span className="pl-4 block">Die Join-to-Create und Voice-Limit-Funktionen unterliegen zeitlichen Begrenzungen, um Missbrauch zu verhindern.</span>
+                        </p>
+                        <p className="ml-4">
+                            <strong className="text-white">Verfügbarkeit:</strong>
+                            <span className="pl-4 block">Der Bot-Betreiber garantiert keine ununterbrochene Verfügbarkeit und behält sich das Recht vor, den Dienst jederzeit einzuschränken oder einzustellen.</span>
                         </p>
                     </section>
 
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">4. Datenschutz</h2>
-                        <p>
-                            Wir sammeln nur die Daten, die für den Betrieb des Bots notwendig sind. Weitere Informationen findest du in unserer Datenschutzerklärung.
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Datenerhebung:</strong>
+                            <span className="pl-4 block">Der Bot sammelt und speichert nur die für seine Funktionen notwendigen Daten. Dies umfasst Server-IDs, Kanal-IDs, Rollen-IDs und nutzerbezogene Daten wie Voice-Channel-Nutzungsstatistiken.</span>
+                        </p>
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Datennutzung:</strong>
+                            <span className="pl-4 block">Gesammelte Daten werden ausschließlich für die Bereitstellung der Bot-Funktionen verwendet und nicht an Dritte weitergegeben.</span>
+                        </p>
+                        <p className="ml-4">
+                            <strong className="text-white">Datenlöschung:</strong>
+                            <span className="pl-4 block">Bei Entfernung des Bots vom Server werden zugehörige Daten nach angemessener Zeit gelöscht.</span>
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">5. Änderungen der Nutzungsbedingungen</h2>
-                        <p>
-                            Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Die fortgesetzte Nutzung des Bots nach solchen Änderungen gilt als Zustimmung zu den neuen Bedingungen.
+                        <h2 className="text-2xl font-bold text-white mb-4">5. Verbotene Nutzung</h2>
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Missbrauch:</strong>
+                            <span className="pl-4 block">Jede Form von Missbrauch des Bots, einschließlich Spamming, Umgehung von Cooldowns oder Ausnutzung von Fehlern, ist untersagt.</span>
+                        </p>
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Unangemessene Inhalte:</strong>
+                            <span className="pl-4 block">Die Verwendung des Bots zur Verbreitung oder Förderung von illegalen, beleidigenden, diskriminierenden oder anderweitig unangemessenen Inhalten ist strengstens verboten.</span>
+                        </p>
+                        <p className="ml-4">
+                            <strong className="text-white">Discord-Links:</strong>
+                            <span className="pl-4 block">Die Funktion zur Filterung von Discord-Links darf nicht umgangen werden.</span>
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">6. Kontakt</h2>
+                        <h2 className="text-2xl font-bold text-white mb-4">6. Haftungsausschluss</h2>
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Haftung:</strong>
+                            <span className="pl-4 block">Der Bot-Betreiber übernimmt keine Haftung für Schäden, die durch die Nutzung des Bots entstehen könnten, einschließlich Datenverlust oder Serverprobleme.</span>
+                        </p>
+                        <p className="ml-4">
+                            <strong className="text-white">Gewährleistung:</strong>
+                            <span className="pl-4 block">Es wird keine Garantie für die Richtigkeit, Vollständigkeit oder Zuverlässigkeit der Bot-Funktionen übernommen.</span>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-bold text-white mb-4">7. Beendigung der Nutzung</h2>
+                        <p className="mb-2 ml-4">
+                            <strong className="text-white">Sperrung:</strong>
+                            <span className="pl-4 block">Der Bot-Betreiber behält sich das Recht vor, bei Verdacht auf Verstoß gegen diese Bedingungen den Zugang zum Bot einzuschränken oder zu sperren.</span>
+                        </p>
+                        <p className="ml-4">
+                            <strong className="text-white">Entfernung:</strong>
+                            <span className="pl-4 block">Server-Administratoren können den Bot jederzeit von ihrem Server entfernen.</span>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-bold text-white mb-4">8. Kontakt</h2>
                         <p>
-                            Bei Fragen zu diesen Nutzungsbedingungen kontaktiere uns bitte über unseren Discord Server.
+                            Bei Fragen, Problemen oder Anliegen bezüglich dieser Nutzungsbedingungen oder des Bots im Allgemeinen kann der Bot-Betreiber über Discord kontaktiert werden.
                         </p>
                     </section>
                 </div>
 
                 <div className="text-center mt-10 text-gray-400">
-                    <p>Letzte Aktualisierung: {new Date().toLocaleDateString()}</p>
+                    <p>Letzte Aktualisierung | 10.05.2025</p>
                 </div>
             </div>
         </main>
