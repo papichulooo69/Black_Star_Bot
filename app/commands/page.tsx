@@ -56,7 +56,7 @@ export default function CommandsPage() {
 
     return (
         <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-bold text-white mb-4">Black Star Bot Commands</h1>
                     <p className="text-xl text-gray-300 mb-32">
@@ -123,6 +123,8 @@ export default function CommandsPage() {
                         </div>
                     )}
             </div>
+
+ 
         </main>
     );
 }
@@ -132,14 +134,14 @@ const CommandsList = ({ commands, copyCommand, copiedCommand }: {
     copyCommand: (command: string) => void,
     copiedCommand: string | null
 }) => {
-    return <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    return <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
         {commands.map((cmd) => (
             <div
                 key={cmd.name}
-                className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700"
+                className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700 h-full"
             >
                 <div className="flex items-start justify-between">
-                    <div>
+                    <div className="w-full pr-4">
                         <h3 className="text-xl font-semibold text-white mb-2">
                             {cmd.name}
                         </h3>
@@ -155,7 +157,7 @@ const CommandsList = ({ commands, copyCommand, copiedCommand }: {
                     </div>
                     <button
                         onClick={() => copyCommand(cmd.name)}
-                        className="text-gray-400 hover:text-white transition-colors"
+                        className="text-gray-400 hover:text-white transition-colors flex-shrink-0"
                         title="Copy example command"
                     >
                         {copiedCommand === cmd.name ? (
@@ -167,7 +169,7 @@ const CommandsList = ({ commands, copyCommand, copiedCommand }: {
                 </div>
                 <p className="text-gray-500 mb-2">Beispiel:</p>
                 {/* Example command */}
-                <div className="bg-gray-900/50 rounded p-3 font-mono text-sm text-gray-300 flex items-center gap-2">
+                <div className="bg-gray-900/50 rounded p-3 font-mono text-sm text-gray-300 flex items-center gap-2 overflow-x-auto scrollbar-dark">
                     {
                         cmd.name.startsWith("/") ? (
                             cmd.parameters && cmd.parameters.length > 0 ? (
@@ -211,8 +213,8 @@ const CommandsList = ({ commands, copyCommand, copiedCommand }: {
                         <p className="text-gray-500 mt-4 mb-2">Parameter:</p>
                         <div className="space-y-2">
                             {cmd.parameters?.map((param, index) => (
-                                <div key={index} className="text-sm">
-                                    <span className="text-slate-400">{param.name}</span>
+                                <div key={index} className="text-sm flex flex-wrap items-baseline">
+                                    <span className="text-slate-400 mr-1">{param.name}</span>
                                     <span className="text-gray-300"> - {param.description}</span>
                                     <span
                                         className={`ml-2 text-xs ${param.required ? 'text-red-400' : 'text-gray-500'}`}>
