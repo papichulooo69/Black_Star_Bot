@@ -58,13 +58,13 @@ export default function CommandsPage() {
         <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
             <div className="max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-white mb-4">Black Star Bot Commands</h1>
+                    <h1 className="text-4xl font-bold text-white mb-4">Bot Commands</h1>
                     <p className="text-xl text-gray-300 mb-32">
                         Nutze die folgenden Befehle mit dem Black Star Bot
                     </p>
                 </div>
 
-                <div className="mb-8 space-y-4">
+                <div className="mb-24 space-y-4">
                     <input
                         type="text"
                         placeholder="Suche nach Befehlen..."
@@ -91,11 +91,15 @@ export default function CommandsPage() {
 
                 {/* Slash Commands Section */}
                 {filteredCommands.slashCommands.length > 0 && (
-                    <div className="mb-10">
-                        <h2 className="text-2xl font-bold text-white mb-6">
-                            Slash Commands{" "}<span
-                                className="inline-block bg-slate-500/20 text-slate-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">/</span>
-                        </h2>
+                    <div className="mb-20">
+                        <div className="flex items-center mb-8 py-3 pl-8 bg-[#20242e] rounded-lg border-2 border-[#323845]">
+                            <h2 className="text-3xl font-bold text-white">
+                                Slash Commands
+                            </h2>
+                            <div className="ml-4 bg-[#323845] text-white text-xl w-10 h-10 flex items-center justify-center rounded-lg border border-[#404758]">
+                                /
+                            </div>
+                        </div>
                         <CommandsList commands={filteredCommands.slashCommands} copyCommand={copyCommand}
                             copiedCommand={copiedCommand} />
                     </div>
@@ -104,10 +108,14 @@ export default function CommandsPage() {
                 {/* Prefix Commands Section */}
                 {filteredCommands.prefixCommands.length > 0 && (
                     <div>
-                        <h2 className="text-2xl font-bold text-white mb-6">
-                            Prefix Commands{" "}<span
-                                className="inline-block bg-slate-500/20 text-slate-300 text-sm px-2 py-1 rounded-md mr-2 mb-2">!</span>
-                        </h2>
+                        <div className="flex items-center mb-8 py-3 pl-8 bg-[#20242e] rounded-lg border-2 border-[#323845]">
+                            <h2 className="text-3xl font-bold text-white">
+                                Prefix Commands
+                            </h2>
+                            <div className="ml-4 bg-[#323845] text-white text-xl w-10 h-10 flex items-center justify-center rounded-lg border border-[#404758]">
+                                !
+                            </div>
+                        </div>
                         <CommandsList commands={filteredCommands.prefixCommands} copyCommand={copyCommand}
                             copiedCommand={copiedCommand} />
                     </div>
