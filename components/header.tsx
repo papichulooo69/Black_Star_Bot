@@ -63,7 +63,7 @@ const Header = () => {
 
             {/* Desktop navigation */}
             <div className="hidden lg:flex justify-center flex-1">
-                <div className="flex items-center space-x-24">
+                <div className="flex items-center space-x-16">
                     <div className="relative">
                         <a
                             onClick={(e) => {
@@ -81,6 +81,8 @@ const Header = () => {
                     </div>
                     <NavLink href="/commands" label="Commands" />
                     <NavLink href="/faq" label="FAQ" />
+                    <NavLink href="/terms" label="Terms" />
+                    <NavLink href="/privacy" label="Privacy" />
                 </div>
             </div>
 
@@ -118,11 +120,13 @@ const Header = () => {
             <div className="lg:hidden bg-transparent border-t border-gray-700 min-h-[calc(100vh-64px)] flex flex-col justify-center">
                 <div className="flex flex-col items-center py-8">
                     <div className="flex flex-col items-center gap-16">
-                        {['/', '/commands', '/faq'].map(menuPath => {
+                        {['/', '/commands', '/faq', '/terms', '/policy'].map(menuPath => {
                             const isActive = pathname === menuPath;
                             const label = menuPath === '/' ? 'Home' :
                                 menuPath === '/commands' ? 'Commands' :
-                                    'FAQ';
+                                    menuPath === '/faq' ? 'FAQ' :
+                                        menuPath === '/terms' ? 'Terms' :
+                                            'Policy';
                             return (
                                 <div key={menuPath} className="relative">
                                     <a

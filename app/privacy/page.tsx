@@ -13,7 +13,7 @@ export default function PrivacyPage() {
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">1. Einleitung</h2>
                         <p className="ml-8">
-                            Diese Datenschutzerklärung informiert über die Art, den Umfang und den Zweck der Erhebung und Verwendung personenbezogener Daten durch den Discord-Bot "Black Star". Bei Fragen zum Datenschutz kontaktieren Sie bitte den Bot-Betreiber über Discord.
+                            Diese Datenschutzerklärung informiert über die Art, den Umfang und den Zweck der Erhebung und Verwendung personenbezogener Daten durch den Discord-Bot "Black Star". Die Verwendung der App ist freiwillig, wenn du also nicht möchtest, dass Daten über dich und deinen Server gesammelt werden, solltest du die App nicht verwenden. Bei Fragen zum Datenschutz kontaktieren Sie bitte den Bot-Betreiber über Discord.
                         </p>
                     </section>
 
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
                         <p className="ml-8">Die Daten werden gespeichert, solange sie für die Bereitstellung der Bot-Funktionalität erforderlich sind:</p>
                         <ul className="list-disc ml-16 space-y-1 mt-2">
                             <li className="ml-4">Serverkonfigurationsdaten werden gespeichert, bis der Bot vom Server entfernt wird oder eine manuelle Zurücksetzung erfolgt</li>
-                            <li className="ml-4">Voice-Nutzungsdaten werden für statistische Zwecke dauerhaft gespeichert, können aber auf Anfrage gelöscht werden</li>
+                            <li className="ml-4">Voice-Nutzungsdaten werden für statistische Zwecke dauerhaft gespeichert.</li>
                             <li className="ml-4">Temporäre Daten (z.B. für Join-to-Create-Channels) werden gelöscht, sobald sie nicht mehr benötigt werden</li>
                         </ul>
                         <p className="mt-2 ml-8">
@@ -122,31 +122,14 @@ export default function PrivacyPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">9. Betroffenenrechte</h2>
-                        <p className="ml-8">
-                            Benutzer haben folgende Rechte bezüglich ihrer personenbezogenen Daten:
-                        </p>
-                        <ul className="list-disc ml-16 space-y-1 mt-2">
-                            <li className="ml-4">Recht auf Auskunft (Art. 15 DSGVO)</li>
-                            <li className="ml-4">Recht auf Berichtigung (Art. 16 DSGVO)</li>
-                            <li className="ml-4">Recht auf Löschung (Art. 17 DSGVO)</li>
-                            <li className="ml-4">Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-                            <li className="ml-4">Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
-                        </ul>
-                        <p className="mt-2 ml-8">
-                            Zur Ausübung dieser Rechte kontaktieren Sie bitte den Bot-Betreiber über Discord.
-                        </p>
-                    </section>
-
-                    <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">10. Änderungen der Datenschutzerklärung</h2>
+                        <h2 className="text-2xl font-bold text-white mb-4">9. Änderungen der Datenschutzerklärung</h2>
                         <p className="ml-8">
                             Diese Datenschutzerklärung kann gelegentlich aktualisiert werden, um geänderten Funktionen des Bots oder rechtlichen Anforderungen gerecht zu werden. Die aktuelle Version dieser Datenschutzerklärung ist stets über die Website abrufbar.
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">11. Voice-Channel Tracking</h2>
+                        <h2 className="text-2xl font-bold text-white mb-4">10. Voice-Channel Tracking</h2>
                         <p className="ml-8">
                             Der Bot speichert Informationen über Ihre Nutzung von Voice-Channels, um die Voice-Time-Tracking-Funktion zu ermöglichen. Dabei werden folgende Daten erfasst:
                         </p>
@@ -163,7 +146,7 @@ export default function PrivacyPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">12. Moderationsfunktionen</h2>
+                        <h2 className="text-2xl font-bold text-white mb-4">11. Moderationsfunktionen</h2>
                         <p className="ml-8">
                             Bei Nutzung der Moderationsfunktionen (Kick, Ban, Timeout) werden folgende Daten erfasst:
                         </p>
@@ -179,7 +162,7 @@ export default function PrivacyPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">13. Umfragedaten</h2>
+                        <h2 className="text-2xl font-bold text-white mb-4">12. Umfragedaten</h2>
                         <p className="ml-8">
                             Bei Erstellung von Umfragen werden folgende Daten gespeichert:
                         </p>
@@ -194,7 +177,7 @@ export default function PrivacyPage() {
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-bold text-white mb-4">14. Automatische Löschung</h2>
+                        <h2 className="text-2xl font-bold text-white mb-4">12. Automatische Löschung</h2>
                         <p className="ml-8">
                             Inaktive Daten werden nach angemessener Zeit automatisch aus der Datenbank entfernt, um Speicherplatz zu sparen und den Datenschutz zu gewährleisten.
                         </p>
