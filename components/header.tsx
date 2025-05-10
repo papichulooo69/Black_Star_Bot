@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, ArrowRight } from "lucide-react";
 import { DISCORD_LINK } from "@/settings";
 import React from "react";
 
@@ -9,7 +9,6 @@ const Header = () => {
             <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
                     <Link href="/" className="flex items-center space-x-2">
-                        <GraduationCap className="h-8 w-8 text-slate-500" />
                         <span className="text-white font-semibold">Black Star Start</span>
                     </Link>
                     <div className="hidden md:flex ml-8 space-x-4">
@@ -30,9 +29,9 @@ const Header = () => {
                 <div className="flex items-center space-x-4">
                     <Link
                         href={DISCORD_LINK}
-                        className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-slate-600 hover:bg-slate-700 transition-colors"
+                        className="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
                     >
-                        Join Discord Server
+                        Join Discord Server <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                 </div>
             </div>

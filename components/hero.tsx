@@ -5,11 +5,9 @@ import Link from "next/link";
 const Hero = () => {
     return (
         <div className="text-center">
-            <div className="flex justify-center mb-8">
-                <School className="h-20 w-20 text-slate-500" />
-            </div>
+
             <h1 className="text-4xl font-bold text-white sm:text-6xl">
-                Black Star Discord
+                Black Star
             </h1>
             <p className="mt-6 text-xl text-gray-300">
                 Dein zuverlässiger Discord Bot

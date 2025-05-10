@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Command, PlayCircle } from "lucide-react";
+import { Command, PlayCircle, ArrowRight } from "lucide-react";
 import { DISCORD_LINK } from "@/settings";
 
 const Join = () => {
@@ -26,7 +26,7 @@ const Join = () => {
                         className="inline-flex items-center px-6 py-3 border border-white text-white text-base font-medium rounded-md hover:bg-white/10 transition-colors"
                     >
                         Join Discord Server
-                        <PlayCircle className="ml-2 h-5 w-5" />
+                        <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                 </div>
             </div>
