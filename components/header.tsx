@@ -16,17 +16,18 @@ const Header = () => {
 
         // Only add fade effect if navigating to a different page
         if (pathname !== href) {
-            // Add a slight fade effect before navigation
-            document.body.style.opacity = '0.5';
-            document.body.style.transition = 'opacity 0.3s ease';
+            // Use faster transition time
+            document.body.style.opacity = '0.7';
+            document.body.style.transition = 'opacity 0.15s ease';
 
+            // Reduce wait time before navigation
             setTimeout(() => {
                 router.push(href);
-                // Restore opacity after navigation
+                // Restore opacity sooner
                 setTimeout(() => {
                     document.body.style.opacity = '1';
-                }, 100);
-            }, 300);
+                }, 50);
+            }, 150);
         }
     };
 
@@ -61,7 +62,7 @@ const Header = () => {
             </div>
 
             {/* Desktop navigation */}
-            <div className="hidden md:flex justify-center flex-1">
+            <div className="hidden lg:flex justify-center flex-1">
                 <div className="flex items-center space-x-24">
                     <div className="relative">
                         <a
@@ -90,14 +91,14 @@ const Header = () => {
                     href={DISCORD_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hidden md:flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-md transition-colors text-sm font-medium"
+                    className="hidden lg:flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-md transition-colors text-sm font-medium"
                 >
                     Join Discord Server
                     <ArrowRight className="h-4 w-4" />
                 </a>
 
                 {/* Mobile menu button - only on small screens */}
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         className="text-gray-400 hover:text-white focus:outline-none bg-[#0d1117]/20 backdrop-blur-md p-1.5 rounded-md"
@@ -114,7 +115,7 @@ const Header = () => {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-            <div className="md:hidden bg-transparent border-t border-gray-700 min-h-[calc(100vh-64px)] flex flex-col justify-center">
+            <div className="lg:hidden bg-transparent border-t border-gray-700 min-h-[calc(100vh-64px)] flex flex-col justify-center">
                 <div className="flex flex-col items-center py-8">
                     <div className="flex flex-col items-center gap-16">
                         {['/', '/commands', '/faq'].map(menuPath => {
