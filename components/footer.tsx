@@ -3,7 +3,7 @@ import { DISCORD_LINK, BOT_INVITE_LINK } from "@/settings";
 import React from "react";
 
 const Footer = () => {
-    return <footer className="bg-gray-900/50 backdrop-blur-sm border-t border-gray-800">
+    return <footer className="bg-gray-900/50 backdrop-blur-sm border-t-2 border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
@@ -58,6 +58,14 @@ const Footer = () => {
                                 className="text-gray-400 hover:text-white transition-colors"
                             >
                                 Terms of Service
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/privacy"
+                                className="text-gray-400 hover:text-white transition-colors"
+                            >
+                                Privacy Policy
                             </Link>
                         </li>
                     </ul>
