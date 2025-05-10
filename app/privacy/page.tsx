@@ -1,7 +1,7 @@
 export default function PrivacyPage() {
     return (
-        <main className="min-h-screen"> {/* Remove any background-related classes */}
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <main className="min-h-screen w-full">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* Increased from max-w-4xl to max-w-6xl */}
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
                     <p className="text-xl text-gray-300 mb-32">
@@ -17,6 +17,7 @@ export default function PrivacyPage() {
                         </p>
                     </section>
 
+                    {/* Rest of the content remains unchanged... */}
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">2. Verantwortlicher</h2>
                         <p className="ml-8">

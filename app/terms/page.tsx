@@ -1,7 +1,7 @@
 export default function TermsPage() {
     return (
-        <main className="min-h-screen"> {/* Remove any background-related classes */}
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <main className="min-h-screen w-full"> {/* Added w-full for full width */}
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* Increased from max-w-4xl to max-w-6xl */}
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
                     <p className="text-xl text-gray-300 mb-32">
