@@ -20,10 +20,9 @@ export const metadata: Metadata = {
         siteName: 'Black Star Bot',
         images: [
             {
-                url: 'https://cdn.discordapp.com/attachments/1366089317541351444/1366089406708191283/pexels-slendyalex-3648850.jpg',
+                url: 'https://cdn.discordapp.com/attachments/1366089317541351444/1370887676491726919/IMG_5514.jpg?ex=68212223&is=681fd0a3&hm=fd7180751c534d95f18a5dd191f4e254f8009f3fc0bc291e6ce9803b79be2c2e&',
                 width: 1200,
                 height: 630,
-                alt: 'Black Star Bot',
             }
         ],
         locale: 'de_DE',
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Black Star Bot',
         description: 'Offizielle Webseite des Black Star Discord Bots',
-        images: ['https://cdn.discordapp.com/attachments/1366089317541351444/1366089406708191283/pexels-slendyalex-3648850.jpg'],
+        images: ['https://cdn.discordapp.com/attachments/1366089317541351444/1370887676491726919/IMG_5514.jpg?ex=68212223&is=681fd0a3&hm=fd7180751c534d95f18a5dd191f4e254f8009f3fc0bc291e6ce9803b79be2c2e&'],
     },
 };
 
