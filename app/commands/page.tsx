@@ -55,11 +55,20 @@ export default function CommandsPage() {
     };
 
     return (
-        <main className="min-h-screen relative">
-            
-            {/* Dark overlay for better text readability */}
-            <div className="fixed inset-0 bg-black/75" style={{ zIndex: -1 }}></div>
-            
+        <main className="min-h-screen">
+            {/* Angepasster Hintergrund mit der dunklen Struktur, wie auf anderen Seiten */}
+            <div
+                className="fixed inset-0 bg-black"
+                style={{
+                    zIndex: -1,
+                    backgroundImage: "url('/images/background.jpg')", // Falls du ein Hintergrundbild verwendest
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    opacity: 0.2  // Reduzierte Opazität für subtilen Effekt
+                }}
+            ></div>
+
             <div className="relative max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-8 py-16 z-10">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-bold text-white mb-4">Bot Commands</h1>
@@ -82,11 +91,10 @@ export default function CommandsPage() {
                             <button
                                 key={category}
                                 onClick={() => toggleCategory(category)}
-                                className={`px-3 py-1 rounded-full text-sm transition-colors backdrop-blur-sm ${
-                                    selectedCategories.includes(category)
+                                className={`px-3 py-1 rounded-full text-sm transition-colors backdrop-blur-sm ${selectedCategories.includes(category)
                                         ? "bg-slate-500/90 text-white"
                                         : "bg-gray-800/70 text-gray-300 hover:bg-gray-700/90"
-                                }`}
+                                    }`}
                             >
                                 {category}
                             </button>

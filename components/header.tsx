@@ -17,18 +17,37 @@ const Header = () => {
 
         // Only add fade effect if navigating to a different page
         if (pathname !== href) {
-            // Use faster transition time
-            document.body.style.opacity = '0.7';
-            document.body.style.transition = 'opacity 0.15s ease';
+            // Create overlay for dark transition
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+            overlay.style.transition = 'background-color 0.25s ease';
+            overlay.style.zIndex = '9999';
+            document.body.appendChild(overlay);
 
-            // Reduce wait time before navigation
+            // Fade to black, aber weniger intensiv (0.5 statt 0.8)
             setTimeout(() => {
-                router.push(href);
-                // Restore opacity sooner
+                overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+
+                // Navigate after short delay
                 setTimeout(() => {
-                    document.body.style.opacity = '1';
-                }, 50);
-            }, 150);
+                    router.push(href);
+
+                    // Fade out the overlay after navigation
+                    setTimeout(() => {
+                        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+
+                        // Remove overlay after fade out
+                        setTimeout(() => {
+                            document.body.removeChild(overlay);
+                        }, 250);
+                    }, 100);
+                }, 200);
+            }, 10);
         }
     };
 
@@ -130,13 +149,13 @@ const Header = () => {
             <div className="lg:hidden bg-transparent border-t border-gray-700 min-h-[calc(100vh-64px)] flex flex-col justify-center">
                 <div className="flex flex-col items-center py-8">
                     <div className="flex flex-col items-center gap-16">
-                        {['/', '/commands', '/faq', '/terms', '/policy'].map(menuPath => {
+                        {['/', '/commands', '/faq', '/terms', '/privacy'].map(menuPath => {
                             const isActive = pathname === menuPath;
                             const label = menuPath === '/' ? 'Home' :
                                 menuPath === '/commands' ? 'Commands' :
                                     menuPath === '/faq' ? 'FAQ' :
                                         menuPath === '/terms' ? 'Terms' :
-                                            'Policy';
+                                            'Privacy';
                             return (
                                 <div key={menuPath} className="relative">
                                     <a

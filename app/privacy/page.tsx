@@ -1,6 +1,6 @@
 export default function PrivacyPage() {
     return (
-        <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+        <main className="min-h-screen"> {/* Remove any background-related classes */}
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
@@ -9,7 +9,7 @@ export default function PrivacyPage() {
                     </p>
                 </div>
 
-                <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-8 text-gray-300 space-y-6">
+                <div className="bg-gray-800/70 backdrop-blur-sm border border-gray-700 rounded-lg p-8 text-gray-300 space-y-6">
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">1. Einleitung</h2>
                         <p className="ml-8">
@@ -187,7 +187,7 @@ export default function PrivacyPage() {
                     </section>
                 </div>
 
-                <div className="mt-2 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center text-gray-400">
+                <div className="mt-2 bg-gray-800/70 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center text-gray-400">
                     <p>Letzte Aktualisierung | 10.05.2025</p>
                 </div>
             </div>
