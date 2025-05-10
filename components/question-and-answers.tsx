@@ -12,7 +12,7 @@ const QuestionAndAnswers = () => {
 
     const toggleItem = (index: number) => {
         setOpenItems(prev => {
-            const newSet = new Set();
+            const newSet = new Set<number>();
             // If clicking on already open item, close it
             // Otherwise, set only the clicked item as open
             if (prev.has(index)) {

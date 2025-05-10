@@ -59,7 +59,7 @@ export default function CommandsPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-bold text-white mb-4">Black Star Bot Commands</h1>
-                    <p className="text-xl text-gray-300">
+                    <p className="text-xl text-gray-300 mb-32">
                         Nutze die folgenden Befehle mit dem Black Star Bot
                     </p>
                 </div>
@@ -79,8 +79,8 @@ export default function CommandsPage() {
                                 key={category}
                                 onClick={() => toggleCategory(category)}
                                 className={`px-3 py-1 rounded-full text-sm transition-colors ${selectedCategories.includes(category)
-                                        ? "bg-slate-500 text-white"
-                                        : "bg-gray-800/50 text-gray-300 hover:bg-gray-700"
+                                    ? "bg-slate-500 text-white"
+                                    : "bg-gray-800/50 text-gray-300 hover:bg-gray-700"
                                     }`}
                             >
                                 {category}

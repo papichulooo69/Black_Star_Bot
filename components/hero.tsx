@@ -6,13 +6,13 @@ const Hero = () => {
     return (
         <div className="text-center">
 
-            <h1 className="text-4xl font-bold text-white sm:text-6xl">
+            <h1 className="text-4xl font-bold text-white sm:text-6xl mt-16 mb-4">
                 Black Star
             </h1>
-            <p className="mt-6 text-xl text-gray-300">
+            <p className="text-xl text-gray-300">
                 Dein zuverlässiger Discord Bot
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+            <div className="mt-10 mb-32 flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                     href={DISCORD_LINK}
                     className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
