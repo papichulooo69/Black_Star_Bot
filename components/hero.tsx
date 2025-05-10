@@ -6,18 +6,19 @@ import Image from "next/image";
 const Hero = () => {
     return (
         <div className="text-center">
-            <h1 className="text-4xl font-bold text-white sm:text-6xl mt-16 mb-4 flex items-center justify-center">
-                <div className="inline-flex items-center">
-                    <Image
-                        src="https://cdn.discordapp.com/attachments/1369317160739930262/1369317274431000667/IMG_8687_3.png?ex=6820b196&is=681f6016&hm=f6959bb77cdda987be2e3c5dc2c99d152133148039a47ec55e6aa8eef7d511f3&"
-                        alt="Black Star Logo"
-                        width={60}
-                        height={60}
-                        className="align-middle"
-                    />
-                    <span className="ml-4 align-middle">Black Star</span>
-                </div>
-            </h1>
+
+            <div className="flex items-center justify-center gap-4 mt-16 mb-4">
+                <Image
+                    src="https://cdn.discordapp.com/attachments/1369317160739930262/1369317274431000667/IMG_8687_3.png?ex=6820b196&is=681f6016&hm=f6959bb77cdda987be2e3c5dc2c99d152133148039a47ec55e6aa8eef7d511f3&"
+                    alt="Black Star Logo"
+                    width={60}
+                    height={60}
+                    className="rounded-full"
+                />
+                <h1 className="text-4xl font-bold text-white sm:text-6xl">
+                    Black Star
+                </h1>
+            </div>
             <p className="text-xl text-gray-300">
                 Dein zuverlässiger Discord Bot
             </p>

@@ -55,8 +55,12 @@ export default function CommandsPage() {
     };
 
     return (
-        <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
-            <div className="max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <main className="min-h-screen relative">
+            
+            {/* Dark overlay for better text readability */}
+            <div className="fixed inset-0 bg-black/75" style={{ zIndex: -1 }}></div>
+            
+            <div className="relative max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-8 py-16 z-10">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-bold text-white mb-4">Bot Commands</h1>
                     <p className="text-xl text-gray-300 mb-32">
@@ -70,7 +74,7 @@ export default function CommandsPage() {
                         placeholder="Suche nach Befehlen..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-slate-500"
+                        className="w-full px-4 py-2 bg-gray-800/70 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-slate-500 backdrop-blur-sm"
                     />
 
                     <div className="flex flex-wrap gap-2">
@@ -78,10 +82,11 @@ export default function CommandsPage() {
                             <button
                                 key={category}
                                 onClick={() => toggleCategory(category)}
-                                className={`px-3 py-1 rounded-full text-sm transition-colors ${selectedCategories.includes(category)
-                                    ? "bg-slate-500 text-white"
-                                    : "bg-gray-800/50 text-gray-300 hover:bg-gray-700"
-                                    }`}
+                                className={`px-3 py-1 rounded-full text-sm transition-colors backdrop-blur-sm ${
+                                    selectedCategories.includes(category)
+                                        ? "bg-slate-500/90 text-white"
+                                        : "bg-gray-800/70 text-gray-300 hover:bg-gray-700/90"
+                                }`}
                             >
                                 {category}
                             </button>
@@ -92,7 +97,7 @@ export default function CommandsPage() {
                 {/* Slash Commands Section */}
                 {filteredCommands.slashCommands.length > 0 && (
                     <div className="mb-20">
-                        <div className="flex items-center mb-8 py-3 pl-8 bg-[#20242e] rounded-lg border-2 border-[#323845]">
+                        <div className="flex items-center mb-8 py-3 pl-8 bg-[#20242e]/90 backdrop-blur-sm rounded-lg border-2 border-[#323845]">
                             <h2 className="text-3xl font-bold text-white">
                                 Slash Commands
                             </h2>
@@ -108,7 +113,7 @@ export default function CommandsPage() {
                 {/* Prefix Commands Section */}
                 {filteredCommands.prefixCommands.length > 0 && (
                     <div>
-                        <div className="flex items-center mb-8 py-3 pl-8 bg-[#20242e] rounded-lg border-2 border-[#323845]">
+                        <div className="flex items-center mb-8 py-3 pl-8 bg-[#20242e]/90 backdrop-blur-sm rounded-lg border-2 border-[#323845]">
                             <h2 className="text-3xl font-bold text-white">
                                 Prefix Commands
                             </h2>
@@ -144,7 +149,7 @@ const CommandsList = ({ commands, copyCommand, copiedCommand }: {
         {commands.map((cmd) => (
             <div
                 key={cmd.name}
-                className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700 h-full"
+                className="bg-gray-800/70 rounded-lg p-6 backdrop-blur-sm border border-gray-700 h-full"
             >
                 <div className="flex items-start justify-between">
                     <div className="w-full pr-4">
