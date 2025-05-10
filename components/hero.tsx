@@ -1,5 +1,5 @@
 import { DISCORD_LINK, BOT_INVITE_LINK } from "@/settings";
-import { ArrowRight, School, Bot } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const Hero = () => {
@@ -12,24 +12,27 @@ const Hero = () => {
             <p className="text-xl text-gray-300">
                 Dein zuverlässiger Discord Bot
             </p>
-            <div className="mt-10 mb-32 flex flex-col sm:flex-row justify-center gap-4">
+            <div className="mt-10 mb-32 flex flex-col sm:flex-row justify-center gap-4 mx-auto">
                 <Link
                     href={DISCORD_LINK}
-                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
+                    className="flex items-center justify-center px-6 py-3 text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
                 >
-                    <span className="flex items-center justify-center">
-                        Join Discord Server
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                    </span>
+                    Join Discord Server
+                    <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
                     href={BOT_INVITE_LINK}
-                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
+                    className="flex items-center justify-center px-6 py-3 text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
                 >
-                    <span className="flex items-center justify-center">
-                        Invite Black Star
-                        <Bot className="ml-2 h-5 w-5" />
-                    </span>
+                    Invite Black Star
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 lucide lucide-bot">
+                        <path d="M12 8V4H8" />
+                        <rect width="16" height="12" x="4" y="8" rx="2" />
+                        <path d="M2 14h2" />
+                        <path d="M20 14h2" />
+                        <path d="M15 13v2" />
+                        <path d="M9 13v2" />
+                    </svg>
                 </Link>
             </div>
         </div>

@@ -42,9 +42,9 @@ const QuestionAndAnswers = () => {
                     return (
                         <div
                             key={index}
-                            className="border-b border-white/20 pb-6"
+                            className="border border-gray-400/20 rounded-lg pb-6 mb-4"
                         >
-                            <div className="flex items-start gap-4">
+                            <div className="flex items-start gap-4 p-4">
                                 <div className="mt-1 flex-shrink-0">
                                     <Circle
                                         className={`h-5 w-5 text-white ${isOpen ? 'fill-white' : 'fill-transparent'}`}
