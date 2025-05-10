@@ -10,8 +10,8 @@ import Banners from "@/components/banners";
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'HTWK Leipzig Discord Bot',
-    description: 'Unofficial Discord bot for the HTWK Leipzig student community',
+    title: 'Black Star Bot',
+    description: 'Offizielle Webseite des Black Star Discord Bots',
 };
 
 export default function RootLayout({
