@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { DISCORD_LINK } from "@/settings";
+import Image from "next/image";
 
 const Header = () => {
     const pathname = usePathname();
@@ -56,8 +57,17 @@ const Header = () => {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
             {/* Logo - always visible */}
             <div className="flex-shrink-0">
-                <Link href="/" className="text-white hover:text-gray-400 transition-colors text-xl font-bold">
-                    Black Star
+                <Link href="/" className="text-white hover:text-gray-400 transition-colors text-xl font-bold flex items-center">
+                    <div className="flex items-center">
+                        <Image
+                            src="https://cdn.discordapp.com/attachments/1369317160739930262/1369317274431000667/IMG_8687_3.png?ex=6820b196&is=681f6016&hm=f6959bb77cdda987be2e3c5dc2c99d152133148039a47ec55e6aa8eef7d511f3&"
+                            alt="Black Star Logo"
+                            width={28}
+                            height={28}
+                            className="inline-block align-middle"
+                        />
+                        <span className="ml-2 inline-block align-middle">Black Star</span>
+                    </div>
                 </Link>
             </div>
 

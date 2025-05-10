@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { DISCORD_LINK, BOT_INVITE_LINK } from "@/settings";
 import React from "react";
+import Image from "next/image";
 
 const Footer = () => {
     return <footer className="bg-gray-900/50 backdrop-blur-sm border-t-2 border-gray-700">
@@ -72,7 +73,20 @@ const Footer = () => {
                 </div>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-                <p>© {new Date().getFullYear()} Black Star Team. All rights reserved.</p>
+                <p className="flex items-center justify-center">
+                    © {new Date().getFullYear()}
+                    <span className="flex items-center mx-1">
+                        <Image
+                            src="https://cdn.discordapp.com/attachments/1369317160739930262/1369317274431000667/IMG_8687_3.png?ex=6820b196&is=681f6016&hm=f6959bb77cdda987be2e3c5dc2c99d152133148039a47ec55e6aa8eef7d511f3&"
+                            alt="Black Star Logo"
+                            width={20}
+                            height={20}
+                            className="inline-block mx-1 rounded-full"
+                        />
+                        Black Star
+                    </span>
+                    Team and Development. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
