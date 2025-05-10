@@ -12,6 +12,29 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
     title: 'Black Star Bot',
     description: 'Offizielle Webseite des Black Star Discord Bots',
+    themeColor: '#000000', // Setzt die Akzentfarbe auf Schwarz
+    openGraph: {
+        title: 'Black Star Bot',
+        description: 'Offizielle Webseite des Black Star Discord Bots',
+        url: 'https://black-star.xyz/',
+        siteName: 'Black Star Bot',
+        images: [
+            {
+                url: 'https://cdn.discordapp.com/attachments/1366089317541351444/1366089406708191283/pexels-slendyalex-3648850.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Black Star Bot',
+            }
+        ],
+        locale: 'de_DE',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Black Star Bot',
+        description: 'Offizielle Webseite des Black Star Discord Bots',
+        images: ['https://cdn.discordapp.com/attachments/1366089317541351444/1366089406708191283/pexels-slendyalex-3648850.jpg'],
+    },
 };
 
 export default function RootLayout({
