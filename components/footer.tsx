@@ -39,6 +39,14 @@ const Footer = () => {
                                 Invite Black Star
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                href="/faq"
+                                className="text-gray-400 hover:text-white transition-colors"
+                            >
+                                FAQ
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="text-center">

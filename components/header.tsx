@@ -72,7 +72,7 @@ const Header = () => {
                             href="/"
                             className={`${pathname === '/' ? 'text-white' : 'text-gray-500'} text-xl font-semibold hover:text-white transition-colors cursor-pointer`}
                         >
-                            Start
+                            Home
                         </a>
                         {pathname === '/' && (
                             <div className="absolute -bottom-1 left-0 w-full h-1 bg-blue-500"></div>
@@ -83,8 +83,19 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Right section - only containing the mobile menu button */}
-            <div className="flex-shrink-0">
+            {/* Right section - Discord button for desktop and mobile menu button for mobile */}
+            <div className="flex-shrink-0 flex items-center">
+                {/* Discord button - only visible on desktop */}
+                <a
+                    href={DISCORD_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden md:flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-md transition-colors text-sm font-medium"
+                >
+                    Join Discord Server
+                    <ArrowRight className="h-4 w-4" />
+                </a>
+
                 {/* Mobile menu button - only on small screens */}
                 <div className="md:hidden">
                     <button
