@@ -56,7 +56,7 @@ const Header = () => {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
             {/* Logo - always visible */}
             <div className="flex-shrink-0">
-                <Link href="/" className="text-white text-xl font-bold">
+                <Link href="/" className="text-white hover:text-gray-400 transition-colors text-xl font-bold">
                     Black Star
                 </Link>
             </div>
@@ -101,12 +101,12 @@ const Header = () => {
                 <div className="lg:hidden">
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="text-gray-400 hover:text-white focus:outline-none bg-[#0d1117]/20 backdrop-blur-md p-1.5 rounded-md"
+                        className="text-white hover:text-gray-400 focus:outline-none p-1.5 rounded-md"
                     >
                         {mobileMenuOpen ? (
-                            <X className="h-6 w-6" />
+                            <X className="h-8 w-8" />
                         ) : (
-                            <Menu className="h-6 w-6" />
+                            <Menu className="h-8 w-8" />
                         )}
                     </button>
                 </div>
