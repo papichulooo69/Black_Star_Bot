@@ -2,7 +2,7 @@
 
 import { Command, COMMANDS } from "@/settings";
 import { useState } from "react";
-import { Check, Copy } from "lucide-react";
+import { Check, Copy, Terminal } from "lucide-react";
 
 export default function CommandsPage() {
     const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
@@ -71,6 +71,7 @@ export default function CommandsPage() {
 
             <div className="relative max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-8 py-16 z-10">
                 <div className="text-center mb-16">
+                    <Terminal className="w-16 h-16 mx-auto mb-6 text-white" strokeWidth={2.2} />
                     <h1 className="text-4xl font-bold text-white mb-4">Bot Commands</h1>
                     <p className="text-xl text-gray-300 mb-32">
                         Nutze die folgenden Befehle mit dem Black Star Bot
@@ -92,8 +93,8 @@ export default function CommandsPage() {
                                 key={category}
                                 onClick={() => toggleCategory(category)}
                                 className={`px-3 py-1 rounded-full text-sm transition-colors backdrop-blur-sm ${selectedCategories.includes(category)
-                                        ? "bg-slate-500/90 text-white"
-                                        : "bg-gray-800/70 text-gray-300 hover:bg-gray-700/90"
+                                    ? "bg-slate-500/90 text-white"
+                                    : "bg-gray-800/70 text-gray-300 hover:bg-gray-700/90"
                                     }`}
                             >
                                 {category}

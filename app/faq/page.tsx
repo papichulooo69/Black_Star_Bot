@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { MessageCircleQuestion } from "lucide-react";
 
 type FAQItem = {
     question: string;
@@ -304,6 +305,7 @@ export default function FAQPage() {
 
             <div className="relative max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-8 py-16 z-10">
                 <div className="text-center mb-16">
+                    <MessageCircleQuestion className="w-16 h-16 mx-auto mb-6 text-white" strokeWidth={2.2} />
                     <h1 className="text-4xl font-bold text-white mb-4">Häufig gestellte Fragen</h1>
                     <p className="text-xl text-gray-300 mb-32">
                         Hilft dir bei allgemeinen Fragen

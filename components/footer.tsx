@@ -86,7 +86,7 @@ const Footer = () => {
                         © {new Date().getFullYear()}
                         <span className="flex items-center mx-2">
                             <Image
-                                src="https://cdn.discordapp.com/attachments/1369317160739930262/1369317274431000667/IMG_8687_3.png?ex=6820b196&is=681f6016&hm=f6959bb77cdda987be2e3c5dc2c99d152133148039a47ec55e6aa8eef7d511f3&"
+                                src="https://cdn.discordapp.com/attachments/1369317160739930262/1369317274431000667/IMG_8687_3.png?ex=68215a56&is=682008d6&hm=e60b4bbea5062c4cf8004ed412c0e84808da1507bb495792e502013165b13e17&"
                                 alt="Black Star Logo"
                                 width={20}
                                 height={20}

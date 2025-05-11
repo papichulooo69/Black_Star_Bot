@@ -1,8 +1,13 @@
+"use client";
+
+import { Handshake } from "lucide-react";
+
 export default function TermsPage() {
     return (
         <main className="min-h-screen w-full">
             <div className="max-w-full mx-auto px-2 sm:px-3 lg:px-4 py-16"> {/* Reduced horizontal padding */}
                 <div className="text-center mb-12">
+                    <Handshake className="w-16 h-16 mx-auto mb-6 text-white" strokeWidth={2.2} />
                     <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
                     <p className="text-xl text-gray-300 mb-32">
                         Nutzungsbedingungen für Black Star Bot

@@ -1,8 +1,13 @@
+"use client";
+
+import { GlobeLock } from "lucide-react";
+
 export default function PrivacyPage() {
     return (
         <main className="min-h-screen w-full">
             <div className="max-w-full mx-auto px-2 sm:px-3 lg:px-4 py-16"> {/* Reduced horizontal padding */}
                 <div className="text-center mb-12">
+                    <GlobeLock className="w-16 h-16 mx-auto mb-6 text-white" strokeWidth={2.2} />
                     <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
                     <p className="text-xl text-gray-300 mb-32">
                         Datenschutzerklärung für Black Star Bot
