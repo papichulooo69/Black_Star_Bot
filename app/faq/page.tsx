@@ -169,23 +169,36 @@ export default function FAQPage() {
 
                     <div className="bg-gray-700/50 p-4 rounded-md border border-gray-600">
                         <h3 className="text-white font-medium mb-2">Zeitlinie</h3>
-                        <ul className="list-disc ml-6 space-y-2">
-                            <li>Registrierung bei Discord: <span className="text-white">27. April 2025</span></li>
-                            <li>Offizielle Verifizierung: <span className="text-white">11. Mai 2025</span></li>
-                        </ul>
+                        <div className="space-y-2">
+                            <div className="flex items-start">
+                                <span className="text-white mr-2 inline-block">•</span>
+                                <div><span className="font-medium text-white">Registrierung bei Discord:</span> 27. April 2025</div>
+                            </div>
+                            <div className="flex items-start">
+                                <span className="text-white mr-2 inline-block">•</span>
+                                <div><span className="font-medium text-white">Offizielle Verifizierung:</span> 11. Mai 2025</div>
+                            </div>
+                        </div>
                         <p className="mt-3">Die Verifizierung durch Discord bestätigt, dass unser Bot die Plattformrichtlinien einhält und sicher für alle Benutzer ist.</p>
                     </div>
 
                     <div className="bg-gray-700/50 p-4 rounded-md border border-gray-600">
                         <h3 className="text-white font-medium mb-2">Was bedeutet Verifizierung?</h3>
                         <p>Eine Verifizierung durch Discord ist ein wichtiger Qualitätsnachweis für Bots. Um verifiziert zu werden, muss ein Bot:</p>
-                        <ul className="list-disc ml-6 mt-2 space-y-1">
-                            <li>Mindestens 75 Server erreichen</li>
-                            <li>Umfangreiche Sicherheitsprüfungen bestehen</li>
-                            <li>Die Discord-Entwicklerrichtlinien strikt einhalten</li>
-                            <li>Datenschutz- und Sicherheitsstandards erfüllen</li>
-                            <li>Eine Überprüfung durch das Discord-Team durchlaufen</li>
-                        </ul>
+                        <div className="mt-2 space-y-1">
+                            {[
+                                'Mindestens 75 Server erreichen',
+                                'Umfangreiche Sicherheitsprüfungen bestehen',
+                                'Die Discord-Entwicklerrichtlinien strikt einhalten',
+                                'Datenschutz- und Sicherheitsstandards erfüllen',
+                                'Eine Überprüfung durch das Discord-Team durchlaufen'
+                            ].map((item, i) => (
+                                <div key={i} className="flex items-start">
+                                    <span className="text-white mr-2 inline-block">•</span>
+                                    <div>{item}</div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="bg-gray-700/50 p-4 rounded-md border border-gray-600">
@@ -193,19 +206,33 @@ export default function FAQPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
                             <div className="bg-gray-800/70 p-3 rounded border border-gray-600">
                                 <h4 className="text-white font-medium mb-1">Für Server-Administratoren</h4>
-                                <ul className="list-disc ml-5 text-sm space-y-1">
-                                    <li>Sicherheit: Geprüfter Code ohne schädliche Funktionen</li>
-                                    <li>Zuverlässigkeit: Stabile Performance auch auf großen Servern</li>
-                                    <li>Support: Zugang zu offiziellem Support-Netzwerk</li>
-                                </ul>
+                                <div className="space-y-1">
+                                    {[
+                                        'Sicherheit: Geprüfter Code ohne schädliche Funktionen',
+                                        'Zuverlässigkeit: Stabile Performance auch auf großen Servern',
+                                        'Support: Zugang zu offiziellem Support-Netzwerk'
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex items-start">
+                                            <span className="text-white mr-2 inline-block">•</span>
+                                            <div className="text-sm">{item}</div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                             <div className="bg-gray-800/70 p-3 rounded border border-gray-600">
                                 <h4 className="text-white font-medium mb-1">Für Server-Mitglieder</h4>
-                                <ul className="list-disc ml-5 text-sm space-y-1">
-                                    <li>Vertrauen: Offizielles Gütesiegel von Discord</li>
-                                    <li>Datenschutz: Garantierte Einhaltung der Datenschutzrichtlinien</li>
-                                    <li>Qualität: Höhere Anforderungen an Funktionalität und Design</li>
-                                </ul>
+                                <div className="space-y-1">
+                                    {[
+                                        'Vertrauen: Offizielles Gütesiegel von Discord',
+                                        'Datenschutz: Garantierte Einhaltung der Datenschutzrichtlinien',
+                                        'Qualität: Höhere Anforderungen an Funktionalität und Design'
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex items-start">
+                                            <span className="text-white mr-2 inline-block">•</span>
+                                            <div className="text-sm">{item}</div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>

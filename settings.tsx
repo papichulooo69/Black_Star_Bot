@@ -235,7 +235,7 @@ export const COMMANDS: Command[] = [
     {
         name: "/remove-join2create",
         description: "Verwandelt einen Join to Create Channel zurück in einen normalen Voice-Channel.",
-        categories: ["Setup Bot", "Administratoren", "Voice Channel"],
+        categories: ["Mitglieder", "Voice Channel"],
         parameters: [{
             name: "channel",
             description: "Der Voice-Channel, der als Join to Create eingerichtet werden soll.",
@@ -245,13 +245,13 @@ export const COMMANDS: Command[] = [
     },
     {
         name: "/voice-time",
-        description: "Zeigt dir, wie lange du in Voice-Channels verbracht hast.",
-        categories: ["Setup Bot", "Administratoren", "Voice Channel"],
+        description: "Zeigt dir, wie viel Zeit du in Voice-Channels verbracht hast.",
+        categories: ["Mitglieder", "Voice Channel"],
     },
     {
         name: "/voice-limit",
         description: "Zeigt dir, wie lange du in Voice-Channels verbracht hast.",
-        categories: ["Setup Bot", "Administratoren", "Voice Channel"],
+        categories: ["Mitglieder", "Voice Channel"],
     },
         {
         name: "/send-news",

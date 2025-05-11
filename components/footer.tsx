@@ -69,24 +69,34 @@ const Footer = () => {
                                 Privacy Policy
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                href="/impressum"
+                                className="text-gray-400 hover:text-white transition-colors"
+                            >
+                                Impressum
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-                <p className="flex items-center justify-center">
-                    © {new Date().getFullYear()}
-                    <span className="flex items-center mx-1">
-                        <Image
-                            src="https://cdn.discordapp.com/attachments/1369317160739930262/1369317274431000667/IMG_8687_3.png?ex=6820b196&is=681f6016&hm=f6959bb77cdda987be2e3c5dc2c99d152133148039a47ec55e6aa8eef7d511f3&"
-                            alt="Black Star Logo"
-                            width={20}
-                            height={20}
-                            className="inline-block mx-1 rounded-full"
-                        />
-                        Black Star
-                    </span>
-                    Team and Development. All rights reserved.
-                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center text-sm sm:text-base">
+                    <div className="flex items-center mb-2 sm:mb-0">
+                        © {new Date().getFullYear()}
+                        <span className="flex items-center mx-2">
+                            <Image
+                                src="https://cdn.discordapp.com/attachments/1369317160739930262/1369317274431000667/IMG_8687_3.png?ex=6820b196&is=681f6016&hm=f6959bb77cdda987be2e3c5dc2c99d152133148039a47ec55e6aa8eef7d511f3&"
+                                alt="Black Star Logo"
+                                width={20}
+                                height={20}
+                                className="inline-block mx-1 rounded-full"
+                            />
+                            Black Star
+                        </span>
+                    </div>
+                    <div>Team and Development. All rights reserved.</div>
+                </div>
             </div>
         </div>
     </footer>
