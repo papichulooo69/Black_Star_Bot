@@ -352,7 +352,7 @@ export const STATS = [
     },
     {
         title: "Server",
-        value: "7+",
+        value: "8+",
         icon: Bot,
     },
     {
