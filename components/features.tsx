@@ -10,7 +10,7 @@ const Features = () => {
                 FEATURES.map((feature) => (
                     <div
                         key={feature.title}
-                        className="bg-gray-800/50 rounded-lg p-6 backdrop-blur-sm border border-gray-700 hover:border-gray-600 transition-colors"
+                        className="bg-gray-800/80 rounded-lg p-6 backdrop-blur-sm border border-gray-700 hover:border-gray-600 transition-colors"
                     >
                         <div className="flex items-center mb-4">
                             <feature.Icon className="h-8 w-8 text-slate-500" />

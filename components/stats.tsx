@@ -13,7 +13,7 @@ const Stats = () => {
                 return (
                     <div
                         key={stat.title}
-                        className="bg-gray-800/50 rounded-lg p-8 text-center backdrop-blur-sm border border-gray-700 hover:border-gray-600 transition-colors"
+                        className="bg-gray-800/80 rounded-lg p-8 text-center backdrop-blur-sm border border-gray-700 hover:border-gray-600 transition-colors"
                     >
                         <div className="flex justify-center mb-4">
                             <stat.icon className="h-8 w-8 text-slate-500" />

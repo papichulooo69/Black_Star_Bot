@@ -110,8 +110,6 @@ const Header = () => {
                     </div>
                     <NavLink href="/commands" label="Commands" />
                     <NavLink href="/faq" label="FAQ" />
-                    <NavLink href="/terms" label="Terms" />
-                    <NavLink href="/privacy" label="Privacy" />
                 </div>
             </div>
 
@@ -149,13 +147,11 @@ const Header = () => {
             <div className="lg:hidden bg-transparent border-t border-gray-700 min-h-[calc(100vh-64px)] flex flex-col justify-center">
                 <div className="flex flex-col items-center py-8">
                     <div className="flex flex-col items-center gap-16">
-                        {['/', '/commands', '/faq', '/terms', '/privacy'].map(menuPath => {
+                        {['/', '/commands', '/faq'].map(menuPath => {
                             const isActive = pathname === menuPath;
                             const label = menuPath === '/' ? 'Home' :
                                 menuPath === '/commands' ? 'Commands' :
-                                    menuPath === '/faq' ? 'FAQ' :
-                                        menuPath === '/terms' ? 'Terms' :
-                                            'Privacy';
+                                    'FAQ';
                             return (
                                 <div key={menuPath} className="relative">
                                     <a
