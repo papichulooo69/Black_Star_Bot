@@ -29,7 +29,7 @@ export default function FAQPage() {
                             <div className="flex flex-col items-center w-28 flex-shrink-0">
                                 <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-600">
                                     <img
-                                        src="https://cdn.discordapp.com/attachments/1369317160739930262/1371101459629867018/image.jpg?ex=6821e93d&is=682097bd&hm=548ff8cf14e10f91c576cd1e59212e67481af8189e992036cb60b26ad3591a8f&"
+                                        src="/paul.png"
                                         alt="Paul"
                                         className="w-full h-full object-cover"
                                     />
@@ -48,7 +48,7 @@ export default function FAQPage() {
                             <div className="flex flex-col items-center w-28 flex-shrink-0">
                                 <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-600">
                                     <img
-                                        src="https://cdn.discordapp.com/attachments/1344654618428440708/1349393781086097420/filtersquality95formatwebp.png?ex=682161a3&is=68201023&hm=96bf7b8e3a18a1bbe54d121e145a1ae7aba9d83781a694179c732cd7e41b597e&"
+                                        src="/colin.png"
                                         alt="Collin"
                                         className="w-full h-full object-cover"
                                     />
@@ -56,7 +56,7 @@ export default function FAQPage() {
                                 <p className="mt-2 font-medium text-white">Collin</p>
                             </div>
                             <div className="text-gray-300 text-center sm:text-left">
-                                <p>Ist die rechte Hand für Lead Developer und hat Expertise in der Erstellung von Bots-Systemen, Web Developing und ist außerdem DevOps Engineer.</p>
+                                <p>Ist die rechte Hand des Lead Developer und hat Expertise in der Erstellung von Bots-Systemen, Web Developing und ist außerdem DevOps Engineer.</p>
                                 <p className="mt-2 text-white">Discord Username: <span className="text-blue-400">itadori</span></p>
                                 <p className="mt-2 text-white">Website: <Link href="https://colin.heggli.dev" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">https://colin.heggli.dev</Link></p>
                             </div>
