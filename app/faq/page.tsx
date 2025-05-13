@@ -81,7 +81,7 @@ export default function FAQPage() {
                         </ol>
                     </div>
 
-                    <p className="pt-1">Nach der Installation kannst du den Bot mit <span className="bg-gray-700/70 px-2 py-0.5 rounded font-mono text-sm">/help</span> aufrufen, um alle verfügbaren Befehle anzuzeigen.</p>
+                    <p className="pt-1">Nach der Installation kannst du den Bot mit <span className="bg-gray-700/70 px-2 py-0.5 rounded font-mono text-sm">/hilfe</span> aufrufen, um alle verfügbaren Befehle anzuzeigen.</p>
 
                     <p className="italic text-sm">Hinweis: Du benötigst die "Administratoren" Berechtigung auf dem Discord-Server, um den Bot hinzufügen zu können.</p>
                 </div>
