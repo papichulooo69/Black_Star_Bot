@@ -217,7 +217,7 @@ const Header = () => {
                         <span className="mr-2 text-xl">⚠️</span>
                         <strong className="font-extrabold text-base">Hinweis:</strong>
                     </span>
-                    <span>Der Bot befindet sich aktuell noch im Entwicklungszustand und ist teilweise nicht erreichbar. Alle wichtigen Infos erhaltet ihr über dem Discord Server. Vielen Dank für Ihr Verständnis!</span>
+                    <span>Der Bot befindet sich aktuell noch im Entwicklungszustand und ist teilweise nicht erreichbar. Alle wichtigen Infos erhaltet ihr über den Discord Server. Vielen Dank für Euer Verständnis!</span>
                 </div>
             </div>
         </>
