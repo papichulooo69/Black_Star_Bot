@@ -211,7 +211,7 @@ const Header = () => {
             </header>
 
             {/* Notification Banner */}
-            <div className="bg-[#1a1a1a] text-yellow-200 py-1.5 text-center text-sm font-medium sticky top-16 z-40 border-b border-gray-700">
+            <div className="bg-[#1a1a1a]/60 text-yellow-200 py-1.5 text-center text-sm font-medium sticky top-16 z-40 border-b border-gray-700/60 backdrop-blur-md">
                 <div className="flex flex-col items-center">
                     <span className="inline-flex items-center mb-1">
                         <span className="mr-2 text-xl">⚠️</span>
