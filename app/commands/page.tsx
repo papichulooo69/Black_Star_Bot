@@ -106,13 +106,16 @@ export default function CommandsPage() {
                 {/* Slash Commands Section */}
                 {filteredCommands.slashCommands.length > 0 && (
                     <div className="mb-20">
-                        <div className="flex items-center mb-8 py-3 pl-8 bg-[#20242e]/90 backdrop-blur-sm rounded-lg border-2 border-[#323845]">
-                            <h2 className="text-3xl font-bold text-white">
-                                Slash Commands
-                            </h2>
-                            <div className="ml-4 bg-[#323845] text-white text-xl w-10 h-10 flex items-center justify-center rounded-lg border border-[#404758]">
-                                /
+                        <div className="flex items-center justify-between mb-8 py-3 px-8 bg-[#20242e]/90 backdrop-blur-sm rounded-lg border-2 border-[#323845]">
+                            <div className="flex items-center">
+                                <h2 className="text-4xl font-bold text-white tracking-wide">
+                                    Slash Commands
+                                </h2>
+                                <div className="ml-4 bg-[#323845] text-white text-xl w-10 h-10 flex items-center justify-center rounded-lg border border-[#404758]">
+                                    /
+                                </div>
                             </div>
+                            <span className="text-2xl font-bold text-white">({filteredCommands.slashCommands.length})</span>
                         </div>
                         <CommandsList commands={filteredCommands.slashCommands} copyCommand={copyCommand}
                             copiedCommand={copiedCommand} />
@@ -122,13 +125,16 @@ export default function CommandsPage() {
                 {/* Prefix Commands Section */}
                 {filteredCommands.prefixCommands.length > 0 && (
                     <div>
-                        <div className="flex items-center mb-8 py-3 pl-8 bg-[#20242e]/90 backdrop-blur-sm rounded-lg border-2 border-[#323845]">
-                            <h2 className="text-3xl font-bold text-white">
-                                Prefix Commands
-                            </h2>
-                            <div className="ml-4 bg-[#323845] text-white text-xl w-10 h-10 flex items-center justify-center rounded-lg border border-[#404758]">
-                                !
+                        <div className="flex items-center justify-between mb-8 py-3 px-8 bg-[#20242e]/90 backdrop-blur-sm rounded-lg border-2 border-[#323845]">
+                            <div className="flex items-center">
+                                <h2 className="text-4xl font-bold text-white tracking-wide">
+                                    Prefix Commands
+                                </h2>
+                                <div className="ml-4 bg-[#323845] text-white text-xl w-10 h-10 flex items-center justify-center rounded-lg border border-[#404758]">
+                                    !
+                                </div>
                             </div>
+                            <span className="text-2xl font-bold text-white">({filteredCommands.prefixCommands.length})</span>
                         </div>
                         <CommandsList commands={filteredCommands.prefixCommands} copyCommand={copyCommand}
                             copiedCommand={copiedCommand} />
