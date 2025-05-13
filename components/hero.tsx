@@ -9,7 +9,7 @@ const Hero = () => {
 
             <div className="flex items-center justify-center gap-4 mt-24 mb-4">
                 <Image
-                    src="https://cdn.discordapp.com/attachments/1369317160739930262/1369317274431000667/IMG_8687_3.png?ex=68215a56&is=682008d6&hm=e60b4bbea5062c4cf8004ed412c0e84808da1507bb495792e502013165b13e17&"
+                    src="/profil.png"
                     alt="Black Star Logo"
                     width={60}
                     height={60}

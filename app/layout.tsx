@@ -50,7 +50,7 @@ export default function RootLayout({
                 <div
                     className="fixed inset-0 -z-20"
                     style={{
-                        backgroundImage: "url('https://cdn.discordapp.com/attachments/1366089317541351444/1366089406708191283/pexels-slendyalex-3648850.jpg?ex=6820d0e7&is=681f7f67&hm=5948a2d0dc8ff5592037cf5127f125f9d863c673536f93110b4fec1c78179272&')",
+                        backgroundImage: "url('/backgroud.png')",
                         backgroundSize: "cover",
                         backgroundAttachment: "fixed",
                         backgroundPosition: "center",
