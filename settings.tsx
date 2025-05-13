@@ -63,6 +63,11 @@ export const COMMANDS: Command[] = [
         categories: ["Bot"]
     },
     {
+        name: "/delete-server-data",
+        description: "Lösche alle gespeicherten Daten seines Servers.",
+        categories: ["Bot", "Administratoren"]
+    },
+    {
         name: "/user-info",
         description: "Zeigt detaillierte Informationen über einen Benutzer an.",
         categories: ["Administratoren", "Moderatoren"],
