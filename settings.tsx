@@ -263,10 +263,10 @@ export const COMMANDS: Command[] = [
         description: "Sendet eine Nachricht in den News-Kanal.",
         categories: ["Setup Bot", "Administratoren"],
         parameters: [{
-            name: "User (Du)",
+            name: "publisher",
             description: "Wer soll als Herausgeber der News angezeigt werden?",
             required: true,
-            example: "Max"
+            example: "User (Du)"
         }]
     },
     {
@@ -301,6 +301,28 @@ export const COMMANDS: Command[] = [
             description: "Lösche nur Nachrichten von diesem Benutzer.",
             required: false,
             example: "Max"
+        }]
+    },
+    {
+        name: "/create-giveaway",
+        description: "Erstellt ein Giveaway in diesem Kanal.",
+        categories: ["Administratoren", "Giveaway"],
+                    parameters: [{
+                        name: "publisher",
+                        description: "Wer soll als Ersteller des Giveaways angezeigt werden?",
+                        required: true,
+                        example: "User (Du)"
+                    }]
+    },
+    {
+        name: "/end-giveaway",
+        description: "Beendet ein laufendes Giveaway vorzeitig.",
+        categories: ["Administratoren", "Giveaway"],
+        parameters: [{
+            name: "giveaway_id",
+            description: "Die ID des Giveaways (zu finden im Footer des Giveaways)",
+            required: true,
+            example: "1747170694"
         }]
     },
     {
