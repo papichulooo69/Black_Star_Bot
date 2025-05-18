@@ -222,6 +222,17 @@ export const COMMANDS: Command[] = [
         }]
     },
     {
+        name: "/setup-counting",
+        description: "Aktiviert oder deaktiviert das Zählen im Counting-Kanal.",
+        categories: ["Setup Bot", "Administratoren"],
+        parameters: [{
+            name: "status",
+            description: "Counting aktivieren oder deaktivieren.",
+            required: true,
+            example: "aktivieren",
+        }]
+    },   
+    {
         name: "/add-join2create",
         description: "Verwandelt einen Voice-Channel in einen Join to Create Channel.",
         categories: ["Setup Bot", "Administratoren", "Voice Channel"],
@@ -259,12 +270,12 @@ export const COMMANDS: Command[] = [
         categories: ["Mitglieder", "Voice Channel"],
     },
         {
-        name: "/send-news",
-        description: "Sendet eine Nachricht in den News-Kanal.",
+        name: "/create-embed",
+        description: "Sende ein Embed in den Kanal, in dem du dich gerade befindest.",
         categories: ["Setup Bot", "Administratoren"],
         parameters: [{
             name: "publisher",
-            description: "Wer soll als Herausgeber der News angezeigt werden?",
+            description: "Wer soll als Herausgeber der Nachricht angezeigt werden?",
             required: true,
             example: "User (Du)"
         }]
