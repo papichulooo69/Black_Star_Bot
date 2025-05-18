@@ -137,7 +137,7 @@ export const COMMANDS: Command[] = [
         }]
     },
     {
-        name: "/setup-poll",
+        name: "/create-poll",
         description: "Erstellt eine Umfrage mit Reaktionen.",
         categories: ["Setup Bot", "Administratoren"],
         parameters: [{
