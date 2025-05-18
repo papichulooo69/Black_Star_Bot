@@ -374,12 +374,12 @@ export const COMMANDS: Command[] = [
 export const STATS = [
     {
         title: "Server Mitglieder",
-        value: "5+",
+        value: "10+",
         icon: UsersIcon,
     },
     {
         title: "Server",
-        value: "8+",
+        value: "10+",
         icon: Bot,
     },
     {
