@@ -281,6 +281,17 @@ export const COMMANDS: Command[] = [
         }]
     },
     {
+        name: "/edit-embed",
+        description: "Bearbeite den Inhalt eines Embeds, das du gesendet hast",
+        categories: ["Setup Bot", "Administratoren"],
+        parameters: [{
+            name: "message_id",
+            description: "Nenne die ID der Nachricht, die bearbeitet werden soll.",
+            required: true,
+            example: "1375611987941134428"
+        }]
+    },    
+    {
         name: "/moderation-panel",
         description: "Öffnet ein Moderations-Panel für den ausgewählten Benutzer.",
         categories: ["Administratoren", "Moderatoren"],
